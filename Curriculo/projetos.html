@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Swiper CSS no <head> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="style.css">
+    <title>Projetos</title>
+</head>
+
+<a href="https://wa.me/5567993025768"
+   class="whatsapp-btn"
+   target="_blank">
+
+    <i class="bi bi-whatsapp"></i>
+
+</a>
+
+<body>
+    <header class="navbar navbar-expand-md sticky-top">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="projetos.html">Projetos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+        <form class="d-flex me-2">
+            <!-- <input class="form-control me-2 text-primary" type="text" placeholder="Palavra-chave">
+            <button class="btn btn-outline-light" type="submit">Pesquisar</button> -->
+        </form>
+        <div class="d-flex align-items-center gap-2">
+            <div class="dropdown">
+                <button class="notif-btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-bell"></i>
+                    <span class="badge badge-notif rounded-pill ms-1">99+</span>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li><span class="dropdown-item mono" style="font-size:10px; color:var(--text-muted); letter-spacing:.1em;">NOTIFICAÇÕES</span></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#"><i class="bi bi-dot text-success"></i> Mensagem 1</a></li>
+                    <li><a class="dropdown-item" href="#"><i class="bi bi-dot text-success"></i> Mensagem 2</a></li>
+                    <li><a class="dropdown-item" href="#">Mensagem 3</a></li>
+                    <li><a class="dropdown-item" href="#">Mensagem 4</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main class="py-5">
+        <div class="container">
+            <p class="section-title mb-4">Projetos</p>
+        </div>
+
+        <!-- Swiper FORA do container para ocupar a tela toda -->
+        <div class="swiper mySwiper pb-5">
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                    <div class="project-card" data-bs-toggle="modal" data-bs-target="#modal1">
+                        <div class="project-thumb" style="background: linear-gradient(135deg, #1a1a2e, #16213e);">
+                            <img src="/img/voo_1.png" alt="Projeto 1" class="img-fluid object-cover">
+                        </div>
+                        <div class="project-info">
+                            <p class="project-name">Portal de Voo</p>
+                            <p class="project-desc">Site de estudo com HTML, CSS e JavaScript</p>
+                            <div class="project-tags">
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
+                                <span class="tag">JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="project-card" data-bs-toggle="modal" data-bs-target="#modal2">
+                        <div class="project-thumb" style="background: linear-gradient(135deg, #0f3460, #533483);">
+                            <i class="bi bi-phone"></i>
+                        </div>
+                        <div class="project-info">
+                            <p class="project-name">App de Tarefas</p>
+                            <p class="project-desc">Aplicativo de gerenciamento de tarefas com React</p>
+                            <div class="project-tags">
+                                <span class="tag">React</span>
+                                <span class="tag">JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="project-card" data-bs-toggle="modal" data-bs-target="#modal3">
+                        <div class="project-thumb" style="background: linear-gradient(135deg, #1b4332, #2d6a4f);">
+                            <i class="bi bi-bar-chart"></i>
+                        </div>
+                        <div class="project-info">
+                            <p class="project-name">Dashboard Analytics</p>
+                            <p class="project-desc">Painel de dados com gráficos interativos</p>
+                            <div class="project-tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">Flask</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="project-card" data-bs-toggle="modal" data-bs-target="#modal4">
+                        <div class="project-thumb" style="background: linear-gradient(135deg, #4a1942, #c3073f);">
+                            <i class="bi bi-shop"></i>
+                        </div>
+                        <div class="project-info">
+                            <p class="project-name">E-commerce UI</p>
+                            <p class="project-desc">Interface de loja virtual com Figma e React</p>
+                            <div class="project-tags">
+                                <span class="tag">Figma</span>
+                                <span class="tag">React</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </main>
+
+    <!-- MODAIS -->
+    <div class="modal fade" id="modal1" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title">Portal de Voo</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-thumb mb-3"><i class="bi bi-laptop"></i></div>
+                    <p>Site de estudo com HTML, CSS e JavaScript.</p>
+                    <div class="project-tags mb-3">
+                        <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span>
+                    </div>
+                    <ul class="modal-features">
+                        <li><i class="bi bi-check-circle-fill text-success"></i> Layout responsivo (mobile-first)</li>
+                        <li><i class="bi bi-check-circle-fill text-success"></i> Animações em CSS puro</li>
+                        <li><i class="bi bi-check-circle-fill text-success"></i> Seção de habilidades e projetos</li>
+                    </ul>
+                </div>
+                <div class="modal-footer border-0">
+                    <a href="#" class="btn btn-outline-secondary btn-sm"><i class="bi bi-github me-1"></i>Ver Código</a>
+                    <a href="#" class="btn btn-primary btn-sm"><i class="bi bi-box-arrow-up-right me-1"></i>Demo</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal2" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title">App de Tarefas</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-thumb mb-3" style="background: linear-gradient(135deg, #0f3460, #533483);"><i class="bi bi-phone"></i></div>
+                    <p>Aplicativo de gerenciamento de tarefas com funcionalidades de criar, editar e excluir itens.</p>
+                    <div class="project-tags mb-3">
+                        <span class="tag">React</span><span class="tag">JavaScript</span>
+                    </div>
+                    <ul class="modal-features">
+                        <li><i class="bi bi-check-circle-fill text-success"></i> CRUD completo de tarefas</li>
+                        <li><i class="bi bi-check-circle-fill text-success"></i> Filtros por status</li>
+                        <li><i class="bi bi-check-circle-fill text-success"></i> Persistência em localStorage</li>
+                    </ul>
+                </div>
+                <div class="modal-footer border-0">
+                    <a href="#" class="btn btn-outline-secondary btn-sm"><i class="bi bi-github me-1"></i>Ver Código</a>
+                    <a href="#" class="btn btn-primary btn-sm"><i class="bi bi-box-arrow-up-right me-1"></i>Demo</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal3" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title">Dashboard Analytics</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-thumb mb-3" style="background: linear-gradient(135deg, #1b4332, #2d6a4f);"><i class="bi bi-bar-chart"></i></div>
+                    <p>Painel de visualização de dados com gráficos interativos e filtros dinâmicos por período.</p>
+                    <div class="project-tags mb-3">
+                        <span class="tag">Python</span><span class="tag">Flask</span>
+                    </div>
+                    <ul class="modal-features">
+                        <li><i class="bi bi-check-circle-fill text-success"></i> Gráficos com Chart.js</li>
+                        <li><i class="bi bi-check-circle-fill text-success"></i> API REST com Flask</li>
+                        <li><i class="bi bi-check-circle-fill text-success"></i> Filtros por data e categoria</li>
+                    </ul>
+                </div>
+                <div class="modal-footer border-0">
+                    <a href="#" class="btn btn-outline-secondary btn-sm"><i class="bi bi-github me-1"></i>Ver Código</a>
+                    <a href="#" class="btn btn-primary btn-sm"><i class="bi bi-box-arrow-up-right me-1"></i>Demo</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal4" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title">E-commerce UI</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-thumb mb-3" style="background: linear-gradient(135deg, #4a1942, #c3073f);"><i class="bi bi-shop"></i></div>
+                    <p>Interface de loja virtual com carrinho de compras, páginas de produto e checkout.</p>
+                    <div class="project-tags mb-3">
+                        <span class="tag">Figma</span><span class="tag">React</span>
+                    </div>
+                    <ul class="modal-features">
+                        <li><i class="bi bi-check-circle-fill text-success"></i> Prototipagem no Figma</li>
+                        <li><i class="bi bi-check-circle-fill text-success"></i> Componentes reutilizáveis</li>
+                        <li><i class="bi bi-check-circle-fill text-success"></i> Carrinho com Context API</li>
+                    </ul>
+                </div>
+                <div class="modal-footer border-0">
+                    <a href="#" class="btn btn-outline-secondary btn-sm"><i class="bi bi-github me-1"></i>Ver Código</a>
+                    <a href="#" class="btn btn-primary btn-sm"><i class="bi bi-box-arrow-up-right me-1"></i>Demo</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <!-- Swiper JS — DEPOIS do Bootstrap e antes do script de inicialização -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    centeredSlides: true,
+    spaceBetween: 25,
+    loop: true,
+
+    autoplay: {
+        delay: 3500,
+        disableOnInteraction: false
+    },
+
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true
+    },
+
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
+    },
+
+    breakpoints: {
+        768: {
+            slidesPerView: 2,
+            centeredSlides: false
+        },
+
+        1200: {
+            slidesPerView: 3,
+            centeredSlides: false
+        }
+    }
+});
+    </script>
+</body>
+</html>

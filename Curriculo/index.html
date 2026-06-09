@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<a href="https://wa.me/5567993025768"
+   class="whatsapp-btn"
+   target="_blank">
+
+    <i class="bi bi-whatsapp"></i>
+
+</a>
+<body>
+    <header class="navbar navbar-expand-md sticky-top">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="projetos.html">Projetos</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="contato.html">Contato</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <form class="d-flex me-2">
+            <!-- <input class="form-control me-2 text-primary" type="text" placeholder="Palavra-chave">
+            <button class="btn btn-outline-light" type="submit">Pesquisar</button> -->
+        </form>
+
+        <div class="d-flex aling-items-center gap-2">
+            <div class="dropdown">
+                <button class="notif-btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="fasle">
+                    <i class="bi bi-bell"></i>
+                    <span class="badge bagde-notif rounded-pill ms-1">99+</span>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li><span class="dropdown-item mono"
+                            style="font-size:10px; color:var(--text-muted); letter-spacing:.1em;">NOTIFICAÇÕES</span>
+                    </li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#"><i class="bi bi-dot text-success"></i> Mensagem 1</a></li>
+                    <li><a class="dropdown-item" href="#"><i class="bi bi-dot text-success"></i> Mensagem 2</a></li>
+                    <li><a class="dropdown-item" href="#">Mensagem 3</a></li>
+                    <li><a class="dropdown-item" href="#">Mensagem 4</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </header>
+
+    <main class="main-wrap">
+        <div class="row g-4">
+
+            <!-- ── ENTREGA 2: Sidebar / Profile card (col-md-4) ── -->
+            <div class="col-12 col-md-4 col-lg-3" id="perfil">
+                <div class="profile-card">
+                    <div class="cover"></div>
+                    <div class="profile-avatar">C</div>
+                    <div class="profile-body">
+                        <p class="profile-name">Camilly Oliveira Santos</p>
+                        <p class="profile-role">. </p>
+
+                        <div class="profile-meta">
+                            <span><i class="bi bi-geo-alt"></i>Botucatu, SP</span>
+                            <span><i class="bi bi-envelope"></i>camillyoli22@gmail.com</span>
+                            <span><i class="bi bi-github"></i>github.com/camilly-santos</span>
+                        </div>
+
+                        <p class="about-label">Sobre mim</p>
+                        <p class="about-text">
+                            .
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-12 col-md-8 col-lg-9" id="conteudo">
+
+                <!-- Formação -->
+                <div class="section-card">
+                    <p class="section-title">Formação Acadêmica</p>
+
+                    <div class="edu-item">
+                        <div class="edu-icon"><i class="bi bi-mortarboard"></i></div>
+                        <div>
+                            <p class="edu-name">Técnico em Desenvolvimento de Sistemas</p>
+                            <p class="edu-info">SENAI · 2025 — 2026</p>
+                        </div>
+                    </div>
+
+                    <div class="edu-item">
+                        <div class="edu-icon"><i class="bi bi-book"></i></div>
+                        <div>
+                            <p class="edu-name">Auxiliar Jurídico</p>
+                            <p class="edu-info">UNICESUMAR · 2024 — 2025</p>
+                        </div>
+                    </div>
+
+
+                    <!-- Habilidades -->
+                    <div class="section-card">
+                        <p class="section-title">Habilidades</p>
+
+                        <div class="row g-3">
+                            <!-- Hard Skills -->
+                            <div class="col-12 col-sm-6">
+                                <div class="accordion" id="accordionHard">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#collapseHard" aria-expanded="true"
+                                                aria-controls="collapseHard">
+                                                Hard Skills
+                                            </button>
+                                        </h2>
+                                        <div id="collapseHard" class="accordion-collapse collapse show"
+                                            data-bs-parent="#accordionHard">
+                                            <div class="accordion-body p-0">
+                                                <ul class="list-group list-group-flush">
+                                                    <li class="list-group-item"><span class="skill-dot"></span>React /
+                                                        JavaScript</li>
+                                                    <li class="list-group-item"><span class="skill-dot"></span>Python /
+                                                        Flask</li>
+                                                    <li class="list-group-item"><span class="skill-dot"></span>HTML &
+                                                        CSS / Bootstrap</li>
+                                                    <li class="list-group-item"><span class="skill-dot"></span>Figma /
+                                                        UI Design</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Soft Skills -->
+                            <div class="col-12 col-sm-6">
+                                <div class="accordion" id="accordionSoft">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#collapseSoft" aria-expanded="true"
+                                                aria-controls="collapseSoft">
+                                                Soft Skills
+                                            </button>
+                                        </h2>
+                                        <div id="collapseSoft" class="accordion-collapse collapse show"
+                                            data-bs-parent="#accordionSoft">
+                                            <div class="accordion-body p-0">
+                                                <ul class="list-group list-group-flush">
+                                                    <li class="list-group-item"><span class="skill-dot"></span>Escuta
+                                                        Ativa</li>
+                                                    <li class="list-group-item"><span
+                                                            class="skill-dot"></span>Colaboração em equipe</li>
+                                                    <li class="list-group-item"><span
+                                                            class="skill-dot"></span>Comunicação clara</li>
+                                                    <li class="list-group-item"><span class="skill-dot"></span>Resolução
+                                                        de problemas</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Experiência -->
+                <div class="section-card">
+                    <p class="section-title">Experiência Profissional</p>
+
+                    <div class="exp-item">
+                        <span class="exp-period">2024</span>
+                        <p class="exp-title">Assistente Administrativo</p>
+                        <p class="exp-company">Nogueira Advocacia - Iguatemi, MS </p>
+                    </div>
+
+                    <div class="exp-item">
+                        <span class="exp-period">Registro Empregatício</span>
+                        <p class="exp-title">Comprovação de Assiduidade; Postura Profissional; Desenvolvimento Front-End e Back-End; 
+                            Manipulação de Dados; Desenvolvimento em Dispositivos Móveis; Elaboração de Projetos.
+                        </p>
+                        <p class="exp-company">Usina Açucareira de São Manoel - São Manoel, SP</p>
+                    </div>
+                </div>
+
+            </div>
+    </main>
+
+
+    <footer id="footer">
+        <div class="container">
+            <div class="row g-4">
+
+                <div class="col-12 col-md-5">
+                    <p class="footer-label">Informações para Contato</p>
+
+                    <div class="contact-item">
+                        <i class="bi bi-envelope-fill d-flex"></i>
+                        <span>camillyoli22@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="bi bi-telephone-fill d-flex"></i>
+                        <span>(67) 99302-5768 </span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="bi bi-geo-alt-fill d-flex"></i>
+                        <span>Botucatu, SP — Brasil</span>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <p class="footer-label">Redes Sociais</p>
+                    <div class="d-flex gap-2 flex-wrap">
+                        <a target="_blank" href="https://github.com/camilly-santos" class="social-link"><i class="bi bi-github"></i></a>
+                        <a target="_blank" href="https://www.linkedin.com/in/camilly-oliveira-01594a348/" class="social-link"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-3 d-flex flex-column">
+                    <p class="footer-label">Disponibilidade</p>
+                    <p style="font-size:13px; color:#aaa; line-height:1.6;">
+                        Aberta a estágios e projetos freelance.
+                    </p>
+                </div>
+
+            </div>
+
+            <hr style="border-color: var(--border); margin: 1.5rem 0 1rem;">
+
+            <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+                <p class="footer-copy mb-0">© 2026 Camilly Oliveira Santos</p>
+                <p class="footer-copy mb-0">Feito com Bootstrap 5</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
+        </script>
+</body>
+
+</html>

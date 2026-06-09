@@ -1,0 +1,557 @@
+:root {
+    --accent: #c8f04a;
+    --bg: #0c0c0c;
+    --surface: #141414;
+    --surface2: #1c1c1c;
+    --border: #2a2a2a;
+    --text-muted: #666;
+    --text-soft: #aaa;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg);
+    color: #e8e8e8;
+    font-family: 'Syne', sans-serif;
+    font-size: 15px;
+}
+
+code,
+.mono {
+    font-family: 'DM Mono', monospace;
+}
+
+/* ── Navbar ── */
+.navbar {
+    background-color: var(--bg) !important;
+    border-bottom: 1px solid var(--border);
+    padding: 0.75rem 0;
+}
+
+.navbar-brand {
+    font-family: 'DM Mono', monospace;
+    font-size: 13px;
+    color: var(--accent) !important;
+    letter-spacing: 0.05em;
+}
+
+.nav-link {
+    font-size: 13px;
+    color: var(--text-soft) !important;
+    letter-spacing: 0.03em;
+    padding: 0.4rem 0.9rem !important;
+    transition: color 0.2s;
+}
+
+.nav-link:hover {
+    color: #fff !important;
+}
+
+.navbar-toggler {
+    border-color: var(--border);
+}
+
+.navbar-toggler-icon {
+    filter: invert(0.7);
+}
+
+/* notificações badge */
+.notif-btn {
+    background: none;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    color: var(--text-soft);
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    position: relative;
+    transition: border-color 0.2s, color 0.2s;
+}
+
+.notif-btn:hover {
+    border-color: var(--accent);
+    color: #fff;
+}
+
+.badge-notif {
+    background-color: #e53935 !important;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+}
+
+.dropdown-menu {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    min-width: 200px;
+}
+
+.dropdown-item {
+    color: var(--text-soft);
+    font-size: 13px;
+    padding: 8px 16px;
+}
+
+.dropdown-item:hover {
+    background: var(--border);
+    color: #fff;
+}
+
+.dropdown-divider {
+    border-color: var(--border);
+}
+
+/* ── Layout ── */
+.main-wrap {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2.5rem 1.25rem;
+}
+
+/* ── Sidebar / Profile card ── */
+.profile-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.profile-card .cover {
+    height: 80px;
+    background: linear-gradient(135deg, #1a1a1a 0%, #1f2a0a 100%);
+    border-bottom: 1px solid var(--border);
+}
+
+.profile-avatar {
+    width: 76px;
+    height: 76px;
+    border-radius: 50%;
+    border: 3px solid var(--bg);
+    background: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    font-weight: 700;
+    color: #0c0c0c;
+    margin-top: -38px;
+    margin-left: 20px;
+    font-family: 'Syne', sans-serif;
+}
+
+.profile-body {
+    padding: 12px 20px 20px;
+}
+
+.profile-name {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 8px 0 2px;
+    letter-spacing: -0.01em;
+}
+
+.profile-role {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--accent);
+    letter-spacing: 0.05em;
+    margin-bottom: 14px;
+}
+
+.profile-meta {
+    font-size: 12.5px;
+    color: var(--text-soft);
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 16px;
+}
+
+.profile-meta i {
+    color: var(--text-muted);
+    margin-right: 6px;
+}
+
+.about-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.about-text {
+    font-size: 13.5px;
+    color: #b0b0b0;
+    line-height: 1.65;
+}
+
+.btn-perfil {
+    margin-top: 18px;
+    width: 100%;
+    background: transparent;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    padding: 8px;
+    border-radius: 6px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.btn-perfil:hover {
+    background: var(--accent);
+    color: #0c0c0c;
+}
+
+/* ── Content cards ── */
+.section-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.section-title {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+}
+
+/* experiência */
+.exp-item {
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.exp-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.exp-title {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 2px;
+}
+
+.exp-company {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--accent);
+}
+
+.exp-period {
+    font-size: 11.5px;
+    color: var(--text-muted);
+    float: right;
+}
+
+/* skills */
+.list-group-item {
+    background: var(--surface2) !important;
+    border-color: var(--border) !important;
+    color: #ccc !important;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.skill-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
+    flex-shrink: 0;
+}
+
+/* formação */
+.edu-item {
+    display: flex;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.edu-item:last-child {
+    border-bottom: none;
+}
+
+.edu-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: var(--text-muted);
+    font-size: 16px;
+}
+
+.edu-name {
+    font-size: 13.5px;
+    font-weight: 500;
+    margin-bottom: 1px;
+}
+
+.edu-info {
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+/* ── Footer ── */
+footer {
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    padding: 2.5rem 0;
+}
+
+.footer-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    margin-bottom: 1.25rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13.5px;
+    color: var(--text-soft);
+    margin-bottom: 10px;
+}
+
+.contact-item i {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    color: var(--accent);
+    flex-shrink: 0;
+}
+
+.footer-copy {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--text-muted);
+    margin-top: 1.5rem;
+}
+
+.social-link {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-soft);
+    font-size: 16px;
+    transition: border-color 0.2s, color 0.2s;
+    text-decoration: none;
+}
+
+.social-link:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+
+/* =========================
+   PROJETOS / SWIPER
+========================= */
+
+.mySwiper {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px 70px;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto !important;
+}
+
+.project-card {
+    width: 100%;
+    max-width: 340px;
+
+    min-height: 420px;
+
+    background: var(--surface);
+    border: 1px solid var(--border);
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+
+    transition: .3s;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0,0,0,.35);
+}
+
+.project-thumb {
+    height: 220px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-thumb i {
+    font-size: 4.5rem;
+    color: white;
+}
+
+.project-info {
+    padding: 1.5rem;
+    flex: 1;
+}
+
+.project-name {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.project-desc {
+    color: #b8b8b8;
+    margin-bottom: 15px;
+}
+
+.project-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.tag {
+    background: rgba(200,240,74,.15);
+    color: var(--accent);
+
+    border: 1px solid rgba(200,240,74,.2);
+
+    padding: 4px 10px;
+    border-radius: 30px;
+    font-size: .75rem;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: var(--accent);
+}
+
+.swiper-pagination-bullet-active {
+    background: var(--accent);
+}
+
+/* Para melhorar o espaçamento */
+.project-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+
+.contact-box {
+    max-width: 750px;
+
+    margin: auto;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    border-radius: 18px;
+
+    padding: 2rem;
+}
+
+.contact-box h1 {
+    color: var(--accent);
+    margin-bottom: 10px;
+}
+
+.form-control {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    color: white;
+}
+
+.form-control:focus {
+    background: var(--surface2);
+    color: white;
+
+    border-color: var(--accent);
+
+    box-shadow: 0 0 0 .2rem rgba(200,240,74,.15);
+}
+
+
+.whatsapp-btn {
+    position: fixed;
+
+    right: 25px;
+    bottom: 25px;
+
+    width: 65px;
+    height: 65px;
+
+    background: #25D366;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+
+    font-size: 2rem;
+
+    text-decoration: none;
+
+    z-index: 9999;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,.3);
+
+    transition: .3s;
+}
+
+.whatsapp-btn:hover {
+    color: white;
+    transform: scale(1.1);
+}
