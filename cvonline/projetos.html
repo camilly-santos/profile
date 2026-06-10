@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
@@ -7,285 +7,517 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <!-- Swiper CSS no <head> -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>Projetos</title>
+    <title>Projetos - Camilly</title>
+    <style>
+        .projetos-header {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2.5rem 2rem 0;
+        }
+
+        .projects-summary {
+            max-width: 720px;
+            color: var(--text-soft);
+            line-height: 1.65;
+            margin-bottom: 0;
+        }
+
+        .mySwiper {
+            max-width: 100% !important;
+            padding: 2rem 3rem 4rem !important;
+        }
+
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            height: auto !important;
+        }
+
+        .project-card {
+            width: 100%;
+            max-width: 390px;
+            min-height: 480px !important;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .project-card:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 4px;
+        }
+
+        .project-thumb {
+            width: 100%;
+            height: 250px !important;
+            overflow: hidden;
+            background: var(--surface2);
+        }
+
+        .project-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+        }
+
+        .modal-gallery-main img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center;
+            display: block;
+            background: #0a0a0a;
+        }
+
+        .project-desc {
+            font-size: .9rem;
+            line-height: 1.55;
+            min-height: 4.8rem;
+        }
+
+        .modal-content {
+            background: var(--surface, #141414);
+            border: 1px solid var(--border, #2a2a2a);
+            color: #e8e8e8;
+            border-radius: 8px;
+        }
+
+        .modal-dialog {
+            max-width: 1080px;
+        }
+
+        .modal-title {
+            color: #e8e8e8;
+        }
+
+        .btn-close {
+            filter: invert(1);
+        }
+
+        .modal-copy {
+            color: #cfcfcf;
+            line-height: 1.7;
+            font-size: .95rem;
+        }
+
+        .modal-label {
+            font-family: 'DM Mono', monospace;
+            font-size: 10px;
+            letter-spacing: .14em;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            margin: 1.25rem 0 .75rem;
+        }
+
+        .modal-gallery-main {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            border-radius: 8px;
+            overflow: hidden;
+            background: var(--surface2);
+            border: 1px solid var(--border);
+        }
+
+        .modal-gallery-thumbs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: .55rem;
+            margin-top: .75rem;
+        }
+
+        .gallery-thumb {
+            border: 1px solid var(--border);
+            background: var(--surface2);
+            border-radius: 8px;
+            padding: 0;
+            overflow: hidden;
+            width: 86px;
+            height: 52px;
+            cursor: pointer;
+            opacity: .72;
+            transition: border-color .2s, opacity .2s, transform .2s;
+            flex: 0 0 auto;
+        }
+
+        .gallery-thumb:hover,
+        .gallery-thumb.active {
+            border-color: var(--accent);
+            opacity: 1;
+        }
+
+        .gallery-thumb:hover {
+            transform: translateY(-2px);
+        }
+
+        .gallery-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .project-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: .75rem;
+        }
+
+        .project-links .btn {
+            border-radius: 6px;
+            font-family: 'DM Mono', monospace;
+            font-size: 12px;
+        }
+
+        @media (max-width: 768px) {
+            .mySwiper {
+                padding: 1.5rem 1.25rem 4rem !important;
+            }
+
+            .projetos-header {
+                padding-inline: 1.25rem;
+            }
+
+            .project-card {
+                max-width: 100%;
+            }
+        }
+    </style>
 </head>
 
-<a href="https://wa.me/5567993025768"
-   class="whatsapp-btn"
-   target="_blank">
-
-    <i class="bi bi-whatsapp"></i>
-
-</a>
-
 <body>
+
     <header class="navbar navbar-expand-md sticky-top">
-        <div class="container">
+        <div class="container-fluid px-3">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarMenu">
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="projetos.html">Projetos</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="projetos.html">Projetos</a></li>
                     <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
                 </ul>
             </div>
-        </div>
-        <form class="d-flex me-2">
-            <!-- <input class="form-control me-2 text-primary" type="text" placeholder="Palavra-chave">
-            <button class="btn btn-outline-light" type="submit">Pesquisar</button> -->
-        </form>
-        <div class="d-flex align-items-center gap-2">
-            <div class="dropdown">
-                <button class="notif-btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                    <i class="bi bi-bell"></i>
-                    <span class="badge badge-notif rounded-pill ms-1">99+</span>
-                </button>
-                <ul class="dropdown-menu dropdown-menu-end">
-                    <li><span class="dropdown-item mono" style="font-size:10px; color:var(--text-muted); letter-spacing:.1em;">NOTIFICAÇÕES</span></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="#"><i class="bi bi-dot text-success"></i> Mensagem 1</a></li>
-                    <li><a class="dropdown-item" href="#"><i class="bi bi-dot text-success"></i> Mensagem 2</a></li>
-                    <li><a class="dropdown-item" href="#">Mensagem 3</a></li>
-                    <li><a class="dropdown-item" href="#">Mensagem 4</a></li>
-                </ul>
+            <div class="d-flex align-items-center gap-2 ms-auto">
+                <div class="dropdown">
+                    <button class="notif-btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-bell"></i>
+                        <span class="badge badge-notif rounded-pill ms-1">99+</span>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><span class="dropdown-item mono" style="font-size:10px; color:var(--text-muted); letter-spacing:.1em;">NOTIFICACOES</span></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#"><i class="bi bi-dot text-success"></i> Mensagem 1</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="bi bi-dot text-success"></i> Mensagem 2</a></li>
+                        <li><a class="dropdown-item" href="#">Mensagem 3</a></li>
+                        <li><a class="dropdown-item" href="#">Mensagem 4</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </header>
 
-    <main class="py-5">
-        <div class="container">
-            <p class="section-title mb-4">Projetos</p>
+    <main>
+        <div class="projetos-header">
+            <p class="section-title">Projetos</p>
+            <p class="projects-summary">Uma selecao de estudos em front-end e sistemas web, com foco em interfaces responsivas, organizacao de dados e aplicacoes CRUD desenvolvidas durante a formacao tecnica.</p>
         </div>
 
-        <!-- Swiper FORA do container para ocupar a tela toda -->
-        <div class="swiper mySwiper pb-5">
-            <div class="swiper-wrapper">
-
-                <div class="swiper-slide">
-                    <div class="project-card" data-bs-toggle="modal" data-bs-target="#modal1">
-                        <div class="project-thumb" style="background: linear-gradient(135deg, #1a1a2e, #16213e);">
-                            <img src="/img/voo_1.png" alt="Projeto 1" class="img-fluid object-cover">
-                        </div>
-                        <div class="project-info">
-                            <p class="project-name">Portal de Voo</p>
-                            <p class="project-desc">Site de estudo com HTML, CSS e JavaScript</p>
-                            <div class="project-tags">
-                                <span class="tag">HTML</span>
-                                <span class="tag">CSS</span>
-                                <span class="tag">JavaScript</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="swiper-slide">
-                    <div class="project-card" data-bs-toggle="modal" data-bs-target="#modal2">
-                        <div class="project-thumb" style="background: linear-gradient(135deg, #0f3460, #533483);">
-                            <i class="bi bi-phone"></i>
-                        </div>
-                        <div class="project-info">
-                            <p class="project-name">App de Tarefas</p>
-                            <p class="project-desc">Aplicativo de gerenciamento de tarefas com React</p>
-                            <div class="project-tags">
-                                <span class="tag">React</span>
-                                <span class="tag">JavaScript</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="swiper-slide">
-                    <div class="project-card" data-bs-toggle="modal" data-bs-target="#modal3">
-                        <div class="project-thumb" style="background: linear-gradient(135deg, #1b4332, #2d6a4f);">
-                            <i class="bi bi-bar-chart"></i>
-                        </div>
-                        <div class="project-info">
-                            <p class="project-name">Dashboard Analytics</p>
-                            <p class="project-desc">Painel de dados com gráficos interativos</p>
-                            <div class="project-tags">
-                                <span class="tag">Python</span>
-                                <span class="tag">Flask</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="swiper-slide">
-                    <div class="project-card" data-bs-toggle="modal" data-bs-target="#modal4">
-                        <div class="project-thumb" style="background: linear-gradient(135deg, #4a1942, #c3073f);">
-                            <i class="bi bi-shop"></i>
-                        </div>
-                        <div class="project-info">
-                            <p class="project-name">E-commerce UI</p>
-                            <p class="project-desc">Interface de loja virtual com Figma e React</p>
-                            <div class="project-tags">
-                                <span class="tag">Figma</span>
-                                <span class="tag">React</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper" id="projectsWrapper"></div>
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
             <div class="swiper-pagination"></div>
         </div>
     </main>
 
-    <!-- MODAIS -->
-    <div class="modal fade" id="modal1" tabindex="-1">
+        <footer id="footer">
+        <div class="container-fluid px-4">
+            <div class="row g-4">
+
+                <div class="col-12 col-md-5">
+                    <p class="footer-label">Informações para Contato</p>
+                    <a class="contact-item" href="https://mail.google.com/mail/?view=cm&fs=1&to=camillyoli22@gmail.com&su=Contato%20pelo%20portf%C3%B3lio&body=Ol%C3%A1!%20Vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar." target="_blank" rel="noopener" aria-label="Enviar e-mail para Camilly pelo Gmail">
+                        <i class="bi bi-envelope-fill d-flex"></i>
+                        <span>camillyoli22@gmail.com</span>
+                    </a>
+                    <a class="contact-item" href="https://wa.me/5567993025768?text=Olá!%20Vi%20seu%20portfólio%20e%20gostaria%20de%20conversar." target="_blank" rel="noopener" aria-label="Conversar com Camilly pelo WhatsApp">
+                        <i class="bi bi-telephone-fill d-flex"></i>
+                        <span>(67) 99302-5768</span>
+                    </a>
+                    <div class="contact-item">
+                        <i class="bi bi-geo-alt-fill d-flex"></i>
+                        <span>Botucatu, SP — Brasil</span>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <p class="footer-label">Redes Sociais</p>
+                    <div class="d-flex gap-2 flex-wrap">
+                        <a target="_blank" href="https://github.com/camilly-santos" class="social-link"><i class="bi bi-github"></i></a>
+                        <a target="_blank" href="https://www.linkedin.com/in/camilly-oliveira-01594a348/" class="social-link"><i class="bi bi-linkedin"></i></a>
+                        <a target="_blank" href="https://wa.me/5567993025768?text=Olá!%20Vi%20seu%20portfólio%20e%20gostaria%20de%20conversar."class="social-link" rel="noopener noreferrer"><i class="bi bi-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-3">
+                    <p class="footer-label">Disponibilidade</p>
+                    <p style="font-size:13px; color:#aaa; line-height:1.6;">
+                        Aberta a estágios e projetos freelance.
+                    </p>
+                </div>
+
+            </div>
+
+            <hr style="border-color: var(--border); margin: 1.5rem 0 1rem;">
+
+            <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+                <p class="footer-copy mb-0">© 2026 Camilly Oliveira Santos</p>
+                <p class="footer-copy mb-0">Feito com Bootstrap 5</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="projectModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header border-0">
-                    <h5 class="modal-title">Portal de Voo</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    <h5 class="modal-title" id="projectModalTitle"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
                 </div>
                 <div class="modal-body">
-                    <div class="modal-thumb mb-3"><i class="bi bi-laptop"></i></div>
-                    <p>Site de estudo com HTML, CSS e JavaScript.</p>
-                    <div class="project-tags mb-3">
-                        <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span>
+                    <div class="modal-gallery-main">
+                        <img id="modalMainImage" src="" alt="">
                     </div>
-                    <ul class="modal-features">
-                        <li><i class="bi bi-check-circle-fill text-success"></i> Layout responsivo (mobile-first)</li>
-                        <li><i class="bi bi-check-circle-fill text-success"></i> Animações em CSS puro</li>
-                        <li><i class="bi bi-check-circle-fill text-success"></i> Seção de habilidades e projetos</li>
-                    </ul>
+                    <div class="modal-gallery-thumbs" id="modalGalleryThumbs"></div>
+
+                    <p class="modal-label">Descricao</p>
+                    <p class="modal-copy" id="projectModalDescription"></p>
+
+                    <p class="modal-label">Tecnologias</p>
+                    <div class="project-tags" id="projectModalTechnologies"></div>
                 </div>
                 <div class="modal-footer border-0">
-                    <a href="#" class="btn btn-outline-secondary btn-sm"><i class="bi bi-github me-1"></i>Ver Código</a>
-                    <a href="#" class="btn btn-primary btn-sm"><i class="bi bi-box-arrow-up-right me-1"></i>Demo</a>
+                    <div class="project-links" id="projectModalLinks"></div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="modal fade" id="modal2" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header border-0">
-                    <h5 class="modal-title">App de Tarefas</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="modal-thumb mb-3" style="background: linear-gradient(135deg, #0f3460, #533483);"><i class="bi bi-phone"></i></div>
-                    <p>Aplicativo de gerenciamento de tarefas com funcionalidades de criar, editar e excluir itens.</p>
-                    <div class="project-tags mb-3">
-                        <span class="tag">React</span><span class="tag">JavaScript</span>
-                    </div>
-                    <ul class="modal-features">
-                        <li><i class="bi bi-check-circle-fill text-success"></i> CRUD completo de tarefas</li>
-                        <li><i class="bi bi-check-circle-fill text-success"></i> Filtros por status</li>
-                        <li><i class="bi bi-check-circle-fill text-success"></i> Persistência em localStorage</li>
-                    </ul>
-                </div>
-                <div class="modal-footer border-0">
-                    <a href="#" class="btn btn-outline-secondary btn-sm"><i class="bi bi-github me-1"></i>Ver Código</a>
-                    <a href="#" class="btn btn-primary btn-sm"><i class="bi bi-box-arrow-up-right me-1"></i>Demo</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="modal3" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header border-0">
-                    <h5 class="modal-title">Dashboard Analytics</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="modal-thumb mb-3" style="background: linear-gradient(135deg, #1b4332, #2d6a4f);"><i class="bi bi-bar-chart"></i></div>
-                    <p>Painel de visualização de dados com gráficos interativos e filtros dinâmicos por período.</p>
-                    <div class="project-tags mb-3">
-                        <span class="tag">Python</span><span class="tag">Flask</span>
-                    </div>
-                    <ul class="modal-features">
-                        <li><i class="bi bi-check-circle-fill text-success"></i> Gráficos com Chart.js</li>
-                        <li><i class="bi bi-check-circle-fill text-success"></i> API REST com Flask</li>
-                        <li><i class="bi bi-check-circle-fill text-success"></i> Filtros por data e categoria</li>
-                    </ul>
-                </div>
-                <div class="modal-footer border-0">
-                    <a href="#" class="btn btn-outline-secondary btn-sm"><i class="bi bi-github me-1"></i>Ver Código</a>
-                    <a href="#" class="btn btn-primary btn-sm"><i class="bi bi-box-arrow-up-right me-1"></i>Demo</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="modal4" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header border-0">
-                    <h5 class="modal-title">E-commerce UI</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="modal-thumb mb-3" style="background: linear-gradient(135deg, #4a1942, #c3073f);"><i class="bi bi-shop"></i></div>
-                    <p>Interface de loja virtual com carrinho de compras, páginas de produto e checkout.</p>
-                    <div class="project-tags mb-3">
-                        <span class="tag">Figma</span><span class="tag">React</span>
-                    </div>
-                    <ul class="modal-features">
-                        <li><i class="bi bi-check-circle-fill text-success"></i> Prototipagem no Figma</li>
-                        <li><i class="bi bi-check-circle-fill text-success"></i> Componentes reutilizáveis</li>
-                        <li><i class="bi bi-check-circle-fill text-success"></i> Carrinho com Context API</li>
-                    </ul>
-                </div>
-                <div class="modal-footer border-0">
-                    <a href="#" class="btn btn-outline-secondary btn-sm"><i class="bi bi-github me-1"></i>Ver Código</a>
-                    <a href="#" class="btn btn-primary btn-sm"><i class="bi bi-box-arrow-up-right me-1"></i>Demo</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-    <!-- Swiper JS — DEPOIS do Bootstrap e antes do script de inicialização -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-        const swiper = new Swiper(".mySwiper", {
-    slidesPerView: 1,
-    centeredSlides: true,
-    spaceBetween: 25,
-    loop: true,
+        const projects = [
+            {
+                id: "portal-voo",
+                title: "Portal de Voo",
+                shortDescription: "Interface web para consulta e acompanhamento de voos, com telas de login e painel principal. O projeto explora layout responsivo, hierarquia visual e interacoes em JavaScript.",
+                fullDescription: "O Portal de Voo e uma aplicacao front-end criada para simular a experiencia de acesso a um sistema de companhias aereas. O projeto contempla tela de autenticacao, visualizacao de informacoes de voo e organizacao de conteudo em uma interface objetiva. A proposta destaca boas praticas de HTML, CSS e JavaScript para construir telas navegaveis, consistentes e adaptaveis.",
+                technologies: ["HTML", "CSS", "JavaScript"],
+                images: [
+                    { src: "img/login_voo.png", alt: "Tela de login do Portal de Voo" },
+                    { src: "img/voo_1.png", alt: "Tela principal do Portal de Voo" }
+                ],
+                github: "",
+                demo: ""
+            },
+            {
+                id: "primeiro-projeto-bootstrap",
+                title: "Primeiro Projeto Bootstrap",
+                shortDescription: "Pagina web criada para praticar componentes e grid do Bootstrap. O estudo organiza conteudo visual com responsividade e padronizacao de estilos.",
+                fullDescription: "Este projeto marca a aplicacao inicial de Bootstrap no desenvolvimento de interfaces. A pagina usa a estrutura de grid, componentes reutilizaveis e classes utilitarias para acelerar a construcao do layout. O objetivo foi consolidar fundamentos de responsividade, composicao visual e organizacao de paginas com uma base consistente de HTML e CSS.",
+                technologies: ["HTML", "CSS", "Bootstrap"],
+                images: [
+                    { src: "img/primeiro_projeto_bootsrap.png", alt: "Pagina do primeiro projeto com Bootstrap" }
+                ],
+                github: "",
+                demo: ""
+            },
+            {
+                id: "crud-alunos-python",
+                title: "CRUD de Alunos em Python",
+                shortDescription: "Sistema CRUD para cadastro e gerenciamento de alunos. A aplicacao trabalha operacoes de criacao, leitura, edicao e exclusao em uma interface simples.",
+                fullDescription: "O CRUD de Alunos em Python foi desenvolvido para praticar a manipulacao de registros em um sistema web. A aplicacao permite cadastrar alunos, consultar dados, atualizar informacoes e remover registros quando necessario. O projeto reforca a integracao entre uma interface HTML/CSS e a logica de back-end em Python.",
+                technologies: ["HTML", "CSS", "Python"],
+                images: [
+                    { src: "img/crud_aluno_py.png", alt: "Tela do CRUD de alunos em Python" }
+                ],
+                github: "",
+                demo: ""
+            },
+            {
+                id: "crud-livros-python",
+                title: "CRUD de Livros em Python",
+                shortDescription: "Aplicacao para controle de livros com cadastro, listagem e manutencao de registros. O foco esta na organizacao de dados e no fluxo basico de CRUD.",
+                fullDescription: "O CRUD de Livros em Python simula um sistema de gerenciamento de acervo. Ele organiza registros de livros em uma interface direta, permitindo registrar informacoes, revisar a lista cadastrada e manter os dados atualizados. O projeto demonstra fundamentos de aplicacoes administrativas com Python, HTML e CSS.",
+                technologies: ["HTML", "CSS", "Python"],
+                images: [
+                    { src: "img/livros_py.png", alt: "Tela do CRUD de livros em Python" }
+                ],
+                github: "",
+                demo: ""
+            },
+            {
+                id: "sistema-quitanda",
+                title: "Sistema de uma Quitanda",
+                shortDescription: "Sistema web para uma quitanda, com telas de gerenciamento e visualizacao de produtos. O projeto aplica Python em uma solucao simples de controle comercial.",
+                fullDescription: "O Sistema de uma Quitanda foi pensado para representar uma rotina de cadastro e consulta de produtos em um pequeno comercio. A interface apresenta informacoes de forma clara e apoia operacoes essenciais de gerenciamento. O projeto combina estrutura visual em HTML/CSS com logica em Python para reforcar conceitos de sistemas web orientados a dados.",
+                technologies: ["HTML", "CSS", "Python"],
+                images: [
+                    { src: "img/quitanda_py.png", alt: "Tela principal do sistema de quitanda" },
+                    { src: "img/quitanda2_py.png", alt: "Tela complementar do sistema de quitanda" }
+                ],
+                github: "",
+                demo: ""
+            },
+            {
+                id: "redimensionamento-responsivo",
+                title: "Redimensionamento Responsivo",
+                shortDescription: "Estudo de responsividade para adaptar uma interface a diferentes tamanhos de tela. O projeto evidencia ajustes de layout, proporcao e legibilidade.",
+                fullDescription: "O estudo de Redimensionamento Responsivo explora como uma pagina se comporta em diferentes larguras de tela. A proposta trabalha a adaptacao de elementos visuais, preservando leitura, alinhamento e hierarquia em dispositivos menores. O projeto reforca conceitos essenciais de CSS responsivo e planejamento de interfaces flexiveis.",
+                technologies: ["HTML", "CSS", "Responsividade"],
+                images: [
+                    { src: "img/redimensaionamento_responsivo.png", alt: "Exemplo de redimensionamento responsivo" }
+                ],
+                github: "",
+                demo: ""
+            }
+        ];
 
-    autoplay: {
-        delay: 3500,
-        disableOnInteraction: false
-    },
+        const wrapper = document.querySelector("#projectsWrapper");
+        const projectModal = new bootstrap.Modal(document.querySelector("#projectModal"));
+        const modalTitle = document.querySelector("#projectModalTitle");
+        const modalDescription = document.querySelector("#projectModalDescription");
+        const modalTechnologies = document.querySelector("#projectModalTechnologies");
+        const modalLinks = document.querySelector("#projectModalLinks");
+        const modalMainImage = document.querySelector("#modalMainImage");
+        const modalGalleryThumbs = document.querySelector("#modalGalleryThumbs");
 
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true
-    },
-
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev"
-    },
-
-    breakpoints: {
-        768: {
-            slidesPerView: 2,
-            centeredSlides: false
-        },
-
-        1200: {
-            slidesPerView: 3,
-            centeredSlides: false
+        function tagsTemplate(technologies) {
+            return technologies.map((technology) => `<span class="tag">${technology}</span>`).join("");
         }
-    }
-});
+
+        function renderProjects() {
+            wrapper.innerHTML = projects.map((project) => {
+                const cover = project.images[0];
+
+                return `
+                    <div class="swiper-slide">
+                        <article class="project-card" tabindex="0" role="button" data-project-id="${project.id}" aria-label="Abrir projeto ${project.title}">
+                            <div class="project-thumb">
+                                <img src="${cover.src}" alt="${cover.alt}">
+                            </div>
+                            <div class="project-info">
+                                <p class="project-name">${project.title}</p>
+                                <p class="project-desc">${project.shortDescription}</p>
+                                <div class="project-tags">${tagsTemplate(project.technologies)}</div>
+                            </div>
+                        </article>
+                    </div>
+                `;
+            }).join("");
+        }
+
+        function setMainImage(project, imageIndex) {
+            const image = project.images[imageIndex];
+            modalMainImage.src = image.src;
+            modalMainImage.alt = image.alt;
+
+            modalGalleryThumbs.querySelectorAll(".gallery-thumb").forEach((button, index) => {
+                button.classList.toggle("active", index === imageIndex);
+                button.setAttribute("aria-pressed", index === imageIndex ? "true" : "false");
+            });
+        }
+
+        function renderModal(project) {
+            modalTitle.textContent = project.title;
+            modalDescription.textContent = project.fullDescription;
+            modalTechnologies.innerHTML = tagsTemplate(project.technologies);
+
+            modalGalleryThumbs.innerHTML = project.images.map((image, index) => `
+                <button class="gallery-thumb" type="button" data-image-index="${index}" aria-label="Ver imagem ${index + 1} de ${project.title}">
+                    <img src="${image.src}" alt="${image.alt}">
+                </button>
+            `).join("");
+
+            modalLinks.innerHTML = "";
+
+            if (project.github) {
+                modalLinks.insertAdjacentHTML("beforeend", `<a href="${project.github}" target="_blank" rel="noopener" class="btn btn-outline-secondary btn-sm"><i class="bi bi-github me-1"></i>Ver codigo</a>`);
+            }
+
+            if (project.demo) {
+                modalLinks.insertAdjacentHTML("beforeend", `<a href="${project.demo}" target="_blank" rel="noopener" class="btn btn-primary btn-sm"><i class="bi bi-box-arrow-up-right me-1"></i>Demo</a>`);
+            }
+
+            if (!project.github && !project.demo) {
+                modalLinks.innerHTML = `<span class="text-secondary mono" style="font-size:12px;">Links externos nao cadastrados</span>`;
+            }
+
+            modalGalleryThumbs.querySelectorAll(".gallery-thumb").forEach((button) => {
+                button.addEventListener("click", () => {
+                    setMainImage(project, Number(button.dataset.imageIndex));
+                });
+            });
+
+            setMainImage(project, 0);
+            projectModal.show();
+        }
+
+        renderProjects();
+
+        wrapper.addEventListener("click", (event) => {
+            const card = event.target.closest(".project-card");
+            if (!card) return;
+
+            const project = projects.find((item) => item.id === card.dataset.projectId);
+            if (project) renderModal(project);
+        });
+
+        wrapper.addEventListener("keydown", (event) => {
+            if (event.key !== "Enter" && event.key !== " ") return;
+
+            const card = event.target.closest(".project-card");
+            if (!card) return;
+
+            event.preventDefault();
+            const project = projects.find((item) => item.id === card.dataset.projectId);
+            if (project) renderModal(project);
+        });
+
+        const swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1.1,
+            centeredSlides: true,
+            spaceBetween: 14,
+            loop: true,
+            autoplay: {
+                delay: 3500,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true
+            },
+            pagination: { el: ".swiper-pagination", clickable: true },
+            navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
+            breakpoints: {
+                768: {
+                    slidesPerView: 2,
+                    centeredSlides: false,
+                    spaceBetween: 20
+                },
+                1200: {
+                    slidesPerView: 3,
+                    centeredSlides: false,
+                    spaceBetween: 24
+                }
+            }
+        });
     </script>
 </body>
 </html>

@@ -6,81 +6,298 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Camilly Oliveira Santos</title>
+    <style>
+        /* ── Home ocupa a tela toda ── */
+        .main-wrap {
+            max-width: 100% !important;
+            width: 100% !important;
+            padding: 2rem 1.25rem !important;
+            min-height: calc(100vh - 57px);
+        }
+
+        .main-wrap > .row {
+            width: 100%;
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        /* ── section-card como accordion ── */
+        .card-accordion {
+            background: var(--surface, #141414);
+            border: 1px solid var(--border, #2a2a2a);
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 1rem;
+        }
+
+        /* cabeçalho clicável — substitui o section-title */
+        .card-accordion-btn {
+            width: 100%;
+            background: none;
+            border: none;
+            padding: 1.1rem 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            border-bottom: 1px solid transparent;
+            transition: border-color .2s;
+        }
+
+        .card-accordion-btn[aria-expanded="true"] {
+            border-bottom-color: var(--border, #2a2a2a);
+        }
+
+        .card-accordion-btn .acc-title {
+            font-family: 'DM Mono', monospace;
+            font-size: 10px;
+            letter-spacing: .14em;
+            color: var(--text-muted, #666);
+            text-transform: uppercase;
+            margin: 0;
+        }
+
+        .card-accordion-btn .acc-icon {
+            color: var(--text-muted, #666);
+            font-size: 14px;
+            transition: transform .25s;
+        }
+
+        .card-accordion-btn[aria-expanded="true"] .acc-icon {
+            transform: rotate(180deg);
+        }
+
+        /* corpo do accordion */
+        .card-accordion-body {
+            padding: 0 1.5rem 1.5rem;
+        }
+
+        /* ── Habilidades: grid simples ── */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        @media (max-width: 576px) {
+            .skills-grid { grid-template-columns: 1fr; }
+        }
+
+        .skills-col-title {
+            font-family: 'DM Mono', monospace;
+            font-size: 10px;
+            letter-spacing: .1em;
+            color: var(--text-muted, #666);
+            text-transform: uppercase;
+            margin-bottom: .75rem;
+            margin-top: 1rem;
+        }
+
+        .skill-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: .5rem 0;
+            border-bottom: 1px solid var(--border, #2a2a2a);
+            color: #ccc;
+            font-size: 13.5px;
+        }
+
+        .skill-item:last-child { border-bottom: none; }
+
+        .edu-content {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .edu-action {
+            align-self: center;
+            margin-left: auto;
+            flex-shrink: 0;
+        }
+
+        .credential-btn {
+            border: 1px solid rgba(200,240,74,.35);
+            background: rgba(200,240,74,.08);
+            color: var(--accent);
+            border-radius: 6px;
+            font-family: 'DM Mono', monospace;
+            font-size: 11px;
+            padding: .45rem .7rem;
+            display: inline-flex;
+            align-items: center;
+            gap: .4rem;
+        }
+
+        .credential-btn:hover {
+            border-color: var(--accent);
+            background: var(--accent);
+            color: #0c0c0c;
+        }
+
+        .course-modal .modal-content {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            color: #e8e8e8;
+        }
+
+        .course-modal .btn-close {
+            filter: invert(1);
+        }
+
+        .course-kicker {
+            font-family: 'DM Mono', monospace;
+            font-size: 10px;
+            letter-spacing: .14em;
+            color: var(--accent);
+            text-transform: uppercase;
+            margin-bottom: .5rem;
+        }
+
+        .course-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: .35rem;
+        }
+
+        .course-text {
+            color: #cfcfcf;
+            font-size: .95rem;
+            line-height: 1.65;
+            margin-bottom: 1rem;
+        }
+
+        .course-facts {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: .75rem;
+            margin: 1rem 0;
+        }
+
+        .course-fact {
+            background: var(--surface2);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: .85rem;
+        }
+
+        .course-fact span {
+            display: block;
+            font-family: 'DM Mono', monospace;
+            font-size: 10px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            margin-bottom: .35rem;
+        }
+
+        .course-fact strong {
+            font-size: .9rem;
+            color: #e8e8e8;
+        }
+
+        .certificate-preview {
+            width: 100%;
+            height: 460px;
+            margin-top: 0;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            overflow: hidden;
+            background: #f5f5f5;
+        }
+
+        .certificate-preview embed,
+        .certificate-preview object {
+            width: 100%;
+            height: 100%;
+            border: 0;
+            display: block;
+        }
+
+        .certificate-fallback {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
+            color: #333;
+            text-align: center;
+        }
+
+        @media (max-width: 576px) {
+            .edu-item {
+                align-items: flex-start;
+            }
+
+            .edu-action {
+                margin-left: 0;
+            }
+
+            .credential-btn span {
+                display: none;
+            }
+
+            .course-facts {
+                grid-template-columns: 1fr;
+            }
+
+            .certificate-preview {
+                height: 340px;
+            }
+        }
+    </style>
 </head>
 
-<a href="https://wa.me/5567993025768"
-   class="whatsapp-btn"
-   target="_blank">
-
-    <i class="bi bi-whatsapp"></i>
-
-</a>
 <body>
+
     <header class="navbar navbar-expand-md sticky-top">
-        <div class="container">
+        <div class="container-fluid px-3">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
             <div class="collapse navbar-collapse" id="navbarMenu">
                 <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="projetos.html">Projetos</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="contato.html">Contato</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="projetos.html">Projetos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
                 </ul>
             </div>
-        </div>
-        <form class="d-flex me-2">
-            <!-- <input class="form-control me-2 text-primary" type="text" placeholder="Palavra-chave">
-            <button class="btn btn-outline-light" type="submit">Pesquisar</button> -->
-        </form>
-
-        <div class="d-flex aling-items-center gap-2">
-            <div class="dropdown">
-                <button class="notif-btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="fasle">
-                    <i class="bi bi-bell"></i>
-                    <span class="badge bagde-notif rounded-pill ms-1">99+</span>
-                </button>
-                <ul class="dropdown-menu dropdown-menu-end">
-                    <li><span class="dropdown-item mono"
-                            style="font-size:10px; color:var(--text-muted); letter-spacing:.1em;">NOTIFICAÇÕES</span>
-                    </li>
-                    <li>
-                        <hr class="dropdown-divider">
-                    </li>
-                    <li><a class="dropdown-item" href="#"><i class="bi bi-dot text-success"></i> Mensagem 1</a></li>
-                    <li><a class="dropdown-item" href="#"><i class="bi bi-dot text-success"></i> Mensagem 2</a></li>
-                    <li><a class="dropdown-item" href="#">Mensagem 3</a></li>
-                    <li><a class="dropdown-item" href="#">Mensagem 4</a></li>
-                </ul>
+            <div class="d-flex align-items-center gap-2 ms-auto">
+                <div class="dropdown">
+                    <button class="notif-btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-bell"></i>
+                        <span class="badge badge-notif rounded-pill ms-1">99+</span>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><span class="dropdown-item mono" style="font-size:10px; color:var(--text-muted); letter-spacing:.1em;">NOTIFICAÇÕES</span></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#"><i class="bi bi-dot text-success"></i> Mensagem 1</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="bi bi-dot text-success"></i> Mensagem 2</a></li>
+                        <li><a class="dropdown-item" href="#">Mensagem 3</a></li>
+                        <li><a class="dropdown-item" href="#">Mensagem 4</a></li>
+                    </ul>
+                </div>
             </div>
-
         </div>
     </header>
 
     <main class="main-wrap">
         <div class="row g-4">
 
-            <!-- ── ENTREGA 2: Sidebar / Profile card (col-md-4) ── -->
+            <!-- Sidebar -->
             <div class="col-12 col-md-4 col-lg-3" id="perfil">
                 <div class="profile-card">
                     <div class="cover"></div>
                     <div class="profile-avatar">C</div>
                     <div class="profile-body">
                         <p class="profile-name">Camilly Oliveira Santos</p>
-                        <p class="profile-role">. </p>
+                        <p class="profile-role">Dev em formação</p>
 
                         <div class="profile-meta">
                             <span><i class="bi bi-geo-alt"></i>Botucatu, SP</span>
@@ -90,144 +307,122 @@
 
                         <p class="about-label">Sobre mim</p>
                         <p class="about-text">
-                            .
+                            Estudante de Desenvolvimento de Sistemas no SENAI, apaixonada por tecnologia e design. Busco meu primeiro estágio para crescer na área de front-end.
                         </p>
-
                     </div>
                 </div>
             </div>
 
-
+            <!-- Conteúdo -->
             <div class="col-12 col-md-8 col-lg-9" id="conteudo">
 
-                <!-- Formação -->
-                <div class="section-card">
-                    <p class="section-title">Formação Acadêmica</p>
+                <!-- ── Formação Acadêmica ── -->
+                <div class="card-accordion">
+                    <button class="card-accordion-btn" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#bodyFormacao"
+                        aria-expanded="true" aria-controls="bodyFormacao">
+                        <span class="profile-role">Formação Acadêmica</span>
+                        <i class="bi bi-chevron-down acc-icon"></i>
+                    </button>
 
-                    <div class="edu-item">
-                        <div class="edu-icon"><i class="bi bi-mortarboard"></i></div>
-                        <div>
-                            <p class="edu-name">Técnico em Desenvolvimento de Sistemas</p>
-                            <p class="edu-info">SENAI · 2025 — 2026</p>
-                        </div>
-                    </div>
+                    <div id="bodyFormacao" class="collapse show">
+                        <div class="card-accordion-body">
 
-                    <div class="edu-item">
-                        <div class="edu-icon"><i class="bi bi-book"></i></div>
-                        <div>
-                            <p class="edu-name">Auxiliar Jurídico</p>
-                            <p class="edu-info">UNICESUMAR · 2024 — 2025</p>
-                        </div>
-                    </div>
-
-
-                    <!-- Habilidades -->
-                    <div class="section-card">
-                        <p class="section-title">Habilidades</p>
-
-                        <div class="row g-3">
-                            <!-- Hard Skills -->
-                            <div class="col-12 col-sm-6">
-                                <div class="accordion" id="accordionHard">
-                                    <div class="accordion-item">
-                                        <h2 class="accordion-header">
-                                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                                data-bs-target="#collapseHard" aria-expanded="true"
-                                                aria-controls="collapseHard">
-                                                Hard Skills
-                                            </button>
-                                        </h2>
-                                        <div id="collapseHard" class="accordion-collapse collapse show"
-                                            data-bs-parent="#accordionHard">
-                                            <div class="accordion-body p-0">
-                                                <ul class="list-group list-group-flush">
-                                                    <li class="list-group-item"><span class="skill-dot"></span>React /
-                                                        JavaScript</li>
-                                                    <li class="list-group-item"><span class="skill-dot"></span>Python /
-                                                        Flask</li>
-                                                    <li class="list-group-item"><span class="skill-dot"></span>HTML &
-                                                        CSS / Bootstrap</li>
-                                                    <li class="list-group-item"><span class="skill-dot"></span>Figma /
-                                                        UI Design</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
+                            <div class="edu-item">
+                                <div class="edu-icon"><i class="bi bi-mortarboard"></i></div>
+                                <div>
+                                    <p class="edu-name">Técnico em Desenvolvimento de Sistemas</p>
+                                    <p class="edu-info">SENAI · Cursando</p>
                                 </div>
                             </div>
 
-                            <!-- Soft Skills -->
-                            <div class="col-12 col-sm-6">
-                                <div class="accordion" id="accordionSoft">
-                                    <div class="accordion-item">
-                                        <h2 class="accordion-header">
-                                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                                data-bs-target="#collapseSoft" aria-expanded="true"
-                                                aria-controls="collapseSoft">
-                                                Soft Skills
-                                            </button>
-                                        </h2>
-                                        <div id="collapseSoft" class="accordion-collapse collapse show"
-                                            data-bs-parent="#accordionSoft">
-                                            <div class="accordion-body p-0">
-                                                <ul class="list-group list-group-flush">
-                                                    <li class="list-group-item"><span class="skill-dot"></span>Escuta
-                                                        Ativa</li>
-                                                    <li class="list-group-item"><span
-                                                            class="skill-dot"></span>Colaboração em equipe</li>
-                                                    <li class="list-group-item"><span
-                                                            class="skill-dot"></span>Comunicação clara</li>
-                                                    <li class="list-group-item"><span class="skill-dot"></span>Resolução
-                                                        de problemas</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
+                            <div class="edu-item">
+                                <div class="edu-icon"><i class="bi bi-book"></i></div>
+                                <div class="edu-content">
+                                    <p class="edu-name">Auxiliar Jurídico</p>
+                                    <p class="edu-info">UNICESUMAR · 2024 — 2025</p>
                                 </div>
+                                
+                                <button class="credential-btn edu-action" type="button" data-bs-toggle="modal" data-bs-target="#modalAuxiliarJuridico" aria-label="Ver detalhes do curso Auxiliar Juridico">
+                                    <i class="bi bi-award"></i>
+                                    <span>Certificado</span>
+                                </button>
                             </div>
+
                         </div>
                     </div>
                 </div>
 
+                <!-- ── Habilidades (sempre visível, sem accordion) ── -->
+                <div class="section-card mb-3">
+                    <p class="profile-role">Habilidades</p>
+                    <div class="skills-grid">
 
-                <!-- Experiência -->
-                <div class="section-card">
-                    <p class="section-title">Experiência Profissional</p>
+                        <div>
+                            <p class="skills-col-title">Hard Skills</p>
+                            <div class="skill-item"><span class="skill-dot"></span>React / JavaScript</div>
+                            <div class="skill-item"><span class="skill-dot"></span>Python / Flask</div>
+                            <div class="skill-item"><span class="skill-dot"></span>HTML & CSS / Bootstrap</div>
+                            <div class="skill-item"><span class="skill-dot"></span>Figma / UI Design</div>
+                        </div>
 
-                    <div class="exp-item">
-                        <span class="exp-period">2024</span>
-                        <p class="exp-title">Assistente Administrativo</p>
-                        <p class="exp-company">Nogueira Advocacia - Iguatemi, MS </p>
+                        <div>
+                            <p class="skills-col-title">Soft Skills</p>
+                            <div class="skill-item"><span class="skill-dot"></span>Escuta Ativa</div>
+                            <div class="skill-item"><span class="skill-dot"></span>Colaboração em equipe</div>
+                            <div class="skill-item"><span class="skill-dot"></span>Comunicação clara</div>
+                            <div class="skill-item"><span class="skill-dot"></span>Resolução de problemas</div>
+                        </div>
+
                     </div>
+                </div>
 
-                    <div class="exp-item">
-                        <span class="exp-period">Registro Empregatício</span>
-                        <p class="exp-title">Comprovação de Assiduidade; Postura Profissional; Desenvolvimento Front-End e Back-End; 
-                            Manipulação de Dados; Desenvolvimento em Dispositivos Móveis; Elaboração de Projetos.
-                        </p>
-                        <p class="exp-company">Usina Açucareira de São Manoel - São Manoel, SP</p>
+                <!-- ── Experiência Profissional ── -->
+                <div class="card-accordion">
+                    <button class="card-accordion-btn" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#bodyExp"
+                        aria-expanded="true" aria-controls="bodyExp">
+                        <span class="profile-role">Experiência Profissional</span>
+                        <i class="bi bi-chevron-down acc-icon"></i>
+                    </button>
+
+                    <div id="bodyExp" class="collapse show">
+                        <div class="card-accordion-body">
+
+                            <div class="exp-item">
+                                <span class="exp-period">2024</span>
+                                <p class="exp-title">Assistente Administrativo</p>
+                                <p class="edu-info">Nogueira Advocacia — Iguatemi, MS</p>
+                            </div>
+
+                            <div class="exp-item">
+                                <span class="exp-period">Registro Empregatício</span>
+                                <p class="exp-title">Comprovação de Assiduidade; Postura Profissional; Desenvolvimento Front-End e Back-End; Manipulação de Dados; Desenvolvimento em Dispositivos Móveis; Elaboração de Projetos.</p>
+                                <p class="edu-info">Usina Açucareira de São Manoel — São Manoel, SP</p>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
 
             </div>
+        </div>
     </main>
 
-
     <footer id="footer">
-        <div class="container">
+        <div class="container-fluid px-4">
             <div class="row g-4">
 
                 <div class="col-12 col-md-5">
                     <p class="footer-label">Informações para Contato</p>
-
-                    <div class="contact-item">
+                    <a class="contact-item" href="https://mail.google.com/mail/?view=cm&fs=1&to=camillyoli22@gmail.com&su=Contato%20pelo%20portf%C3%B3lio&body=Ol%C3%A1!%20Vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar." target="_blank" rel="noopener" aria-label="Enviar e-mail para Camilly pelo Gmail">
                         <i class="bi bi-envelope-fill d-flex"></i>
                         <span>camillyoli22@gmail.com</span>
-                    </div>
-                    <div class="contact-item">
+                    </a>
+                    <a class="contact-item" href="https://wa.me/5567993025768?text=Olá!%20Vi%20seu%20portfólio%20e%20gostaria%20de%20conversar." target="_blank" rel="noopener" aria-label="Conversar com Camilly pelo WhatsApp">
                         <i class="bi bi-telephone-fill d-flex"></i>
-                        <span>(67) 99302-5768 </span>
-                    </div>
+                        <span>(67) 99302-5768</span>
+                    </a>
                     <div class="contact-item">
                         <i class="bi bi-geo-alt-fill d-flex"></i>
                         <span>Botucatu, SP — Brasil</span>
@@ -239,10 +434,11 @@
                     <div class="d-flex gap-2 flex-wrap">
                         <a target="_blank" href="https://github.com/camilly-santos" class="social-link"><i class="bi bi-github"></i></a>
                         <a target="_blank" href="https://www.linkedin.com/in/camilly-oliveira-01594a348/" class="social-link"><i class="bi bi-linkedin"></i></a>
+                        <a target="_blank" href="https://wa.me/5567993025768?text=Olá!%20Vi%20seu%20portfólio%20e%20gostaria%20de%20conversar."class="social-link" rel="noopener noreferrer"><i class="bi bi-whatsapp"></i></a>
                     </div>
                 </div>
 
-                <div class="col-12 col-md-3 d-flex flex-column">
+                <div class="col-12 col-md-3">
                     <p class="footer-label">Disponibilidade</p>
                     <p style="font-size:13px; color:#aaa; line-height:1.6;">
                         Aberta a estágios e projetos freelance.
@@ -260,9 +456,54 @@
         </div>
     </footer>
 
+    <div class="modal fade course-modal" id="modalAuxiliarJuridico" tabindex="-1" aria-labelledby="modalAuxiliarJuridicoLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <div>
+                        <p class="course-kicker">Formacao complementar</p>
+                        <h5 class="modal-title course-title" id="modalAuxiliarJuridicoLabel">Auxiliar Juridico</h5>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body pt-0">
+                    <p class="course-text">
+                        Curso voltado aos fundamentos da rotina juridica e administrativa, com foco em organizacao de documentos, atendimento, postura profissional e apoio a processos internos.
+                    </p>
+
+                    <div class="course-facts">
+                        <div class="course-fact">
+                            <span>Instituicao</span>
+                            <strong>UNICESUMAR</strong>
+                        </div>
+                        <div class="course-fact">
+                            <span>Periodo</span>
+                            <strong>2024 - 2025</strong>
+                        </div>
+                        <div class="course-fact">
+                            <span>Status</span>
+                            <strong>Concluido</strong>
+                        </div>
+                    </div>
+
+                    <div class="certificate-preview">
+                        <object data="certificados/certificao%20Camilly.pdf#toolbar=0&navpanes=0&scrollbar=0&view=FitH" type="application/pdf">
+                            <div class="certificate-fallback">
+                                <p class="mb-0">Seu navegador nao exibiu a previa do certificado.</p>
+                            </div>
+                        </object>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
-        </script>
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    
+    <script>
+        const whatsappLink ="https://wa.me/5567993025768?text=Olá!%20Vi%20seu%20portfólio%20e%20gostaria%20de%20conversar.";
+    </script>
 </body>
 
 </html>
