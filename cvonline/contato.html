@@ -9,7 +9,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Syne:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Contato — Camilly</title>
     <style>
@@ -20,7 +22,7 @@
             min-height: calc(100vh - 57px);
         }
 
-        .contato-wrap > .row {
+        .contato-wrap>.row {
             max-width: 1000px;
             margin-left: auto;
             margin-right: auto;
@@ -128,7 +130,7 @@
         .form-control:focus,
         .form-select:focus {
             border-color: var(--accent) !important;
-            box-shadow: 0 0 0 3px rgba(200,240,74,.12) !important;
+            box-shadow: 0 0 0 3px rgba(200, 240, 74, .12) !important;
             color: #e8e8e8 !important;
         }
 
@@ -169,8 +171,8 @@
         /* mensagem de sucesso */
         .alert-success-custom {
             display: none;
-            background: rgba(200,240,74,.08);
-            border: 1px solid rgba(200,240,74,.25);
+            background: rgba(200, 240, 74, .08);
+            border: 1px solid rgba(200, 240, 74, .25);
             border-radius: 8px;
             padding: .85rem 1.1rem;
             font-size: .85rem;
@@ -183,8 +185,8 @@
             display: inline-flex;
             align-items: center;
             gap: .4rem;
-            background: rgba(200,240,74,.08);
-            border: 1px solid rgba(200,240,74,.2);
+            background: rgba(200, 240, 74, .08);
+            border: 1px solid rgba(200, 240, 74, .2);
             border-radius: 20px;
             padding: .3rem .8rem;
             font-family: 'DM Mono', monospace;
@@ -202,8 +204,15 @@
         }
 
         @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: .3; }
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: .3;
+            }
         }
     </style>
 </head>
@@ -221,22 +230,6 @@
                     <li class="nav-item"><a class="nav-link active" href="contato.html">Contato</a></li>
                 </ul>
             </div>
-            <div class="d-flex align-items-center gap-2 ms-auto">
-                <div class="dropdown">
-                    <button class="notif-btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="bi bi-bell"></i>
-                        <span class="badge badge-notif rounded-pill ms-1">99+</span>
-                    </button>
-                    <ul class="dropdown-menu dropdown-menu-end">
-                        <li><span class="dropdown-item mono" style="font-size:10px; color:var(--text-muted); letter-spacing:.1em;">NOTIFICAÇÕES</span></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#"><i class="bi bi-dot text-success"></i> Mensagem 1</a></li>
-                        <li><a class="dropdown-item" href="#"><i class="bi bi-dot text-success"></i> Mensagem 2</a></li>
-                        <li><a class="dropdown-item" href="#">Mensagem 3</a></li>
-                        <li><a class="dropdown-item" href="#">Mensagem 4</a></li>
-                    </ul>
-                </div>
-            </div>
         </div>
     </header>
 
@@ -252,10 +245,13 @@
 
                 <p class="info-title">Vamos conversar?</p>
                 <p class="info-sub">
-                    Estou aberta a estágios e projetos freelance. Preencha o formulário ou entre em contato diretamente pelos canais abaixo.
+                    Estou aberta a estágios e projetos freelance. Preencha o formulário ou entre em contato diretamente
+                    pelos canais abaixo.
                 </p>
 
-                <a class="info-row" href="https://mail.google.com/mail/?view=cm&fs=1&to=camillyoli22@gmail.com&su=Contato%20pelo%20portf%C3%B3lio&body=Ol%C3%A1!%20Vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar." target="_blank" rel="noopener" aria-label="Enviar e-mail para Camilly pelo Gmail">
+                <a class="info-row"
+                    href="https://mail.google.com/mail/?view=cm&fs=1&to=camillyoli22@gmail.com&su=Contato%20pelo%20portf%C3%B3lio&body=Ol%C3%A1!%20Vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar."
+                    target="_blank" rel="noopener" aria-label="Enviar e-mail para Camilly pelo Gmail">
                     <div class="info-icon"><i class="bi bi-envelope-fill"></i></div>
                     <div>
                         <p class="info-label">E-mail</p>
@@ -263,7 +259,9 @@
                     </div>
                 </a>
 
-                <a class="info-row" href="https://wa.me/5567993025768?text=Olá!%20Vi%20seu%20portfólio%20e%20gostaria%20de%20conversar." target="_blank" rel="noopener" aria-label="Conversar pelo WhatsApp">
+                <a class="info-row"
+                    href="https://wa.me/5567993025768?text=Olá!%20Vi%20seu%20portfólio%20e%20gostaria%20de%20conversar."
+                    target="_blank" rel="noopener" aria-label="Conversar pelo WhatsApp">
                     <div class="info-icon"><i class="bi bi-whatsapp"></i></div>
                     <div>
                         <p class="info-label">WhatsApp</p>
@@ -283,10 +281,12 @@
                     <a href="https://github.com/camilly-santos" target="_blank" class="social-link" title="GitHub">
                         <i class="bi bi-github"></i>
                     </a>
-                    <a href="https://www.linkedin.com/in/camilly-oliveira-01594a348/" target="_blank" class="social-link" title="LinkedIn">
+                    <a href="https://www.linkedin.com/in/camilly-oliveira-01594a348/" target="_blank"
+                        class="social-link" title="LinkedIn">
                         <i class="bi bi-linkedin"></i>
                     </a>
-                    <a href="https://wa.me/5567993025768?text=Olá!%20Vi%20seu%20portfólio%20e%20gostaria%20de%20conversar." target="_blank" class="social-link" title="WhatsApp">
+                    <a href="https://wa.me/5567993025768?text=Olá!%20Vi%20seu%20portfólio%20e%20gostaria%20de%20conversar."
+                        target="_blank" class="social-link" title="WhatsApp">
                         <i class="bi bi-whatsapp"></i>
                     </a>
                 </div>
@@ -311,7 +311,8 @@
 
                         <div class="col-12 col-sm-6">
                             <label class="form-label">Empresa</label>
-                            <input type="text" class="form-control" id="empresa" placeholder="Nome da empresa (opcional)">
+                            <input type="text" class="form-control" id="empresa"
+                                placeholder="Nome da empresa (opcional)">
                         </div>
 
                         <div class="col-12 col-sm-6">
@@ -355,11 +356,15 @@
 
                 <div class="col-12 col-md-5">
                     <p class="footer-label">Informações para Contato</p>
-                    <a class="contact-item" href="https://mail.google.com/mail/?view=cm&fs=1&to=camillyoli22@gmail.com&su=Contato%20pelo%20portf%C3%B3lio&body=Ol%C3%A1!%20Vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar." target="_blank" rel="noopener" aria-label="Enviar e-mail para Camilly pelo Gmail">
+                    <a class="contact-item"
+                        href="https://mail.google.com/mail/?view=cm&fs=1&to=camillyoli22@gmail.com&su=Contato%20pelo%20portf%C3%B3lio&body=Ol%C3%A1!%20Vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar."
+                        target="_blank" rel="noopener" aria-label="Enviar e-mail para Camilly pelo Gmail">
                         <i class="bi bi-envelope-fill d-flex"></i>
                         <span>camillyoli22@gmail.com</span>
                     </a>
-                    <a class="contact-item" href="https://wa.me/5567993025768?text=Olá!%20Vi%20seu%20portfólio%20e%20gostaria%20de%20conversar." target="_blank" rel="noopener" aria-label="Conversar com Camilly pelo WhatsApp">
+                    <a class="contact-item"
+                        href="https://wa.me/5567993025768?text=Olá!%20Vi%20seu%20portfólio%20e%20gostaria%20de%20conversar."
+                        target="_blank" rel="noopener" aria-label="Conversar com Camilly pelo WhatsApp">
                         <i class="bi bi-telephone-fill d-flex"></i>
                         <span>(67) 99302-5768</span>
                     </a>
@@ -372,9 +377,13 @@
                 <div class="col-12 col-md-4">
                     <p class="footer-label">Redes Sociais</p>
                     <div class="d-flex gap-2 flex-wrap">
-                        <a target="_blank" href="https://github.com/camilly-santos" class="social-link"><i class="bi bi-github"></i></a>
-                        <a target="_blank" href="https://www.linkedin.com/in/camilly-oliveira-01594a348/" class="social-link"><i class="bi bi-linkedin"></i></a>
-                        <a target="_blank" href="https://wa.me/5567993025768?text=Olá!%20Vi%20seu%20portfólio%20e%20gostaria%20de%20conversar." class="social-link"><i class="bi bi-whatsapp"></i></a>
+                        <a target="_blank" href="https://github.com/camilly-santos" class="social-link"><i
+                                class="bi bi-github"></i></a>
+                        <a target="_blank" href="https://www.linkedin.com/in/camilly-oliveira-01594a348/"
+                            class="social-link"><i class="bi bi-linkedin"></i></a>
+                        <a target="_blank"
+                            href="https://wa.me/5567993025768?text=Olá!%20Vi%20seu%20portfólio%20e%20gostaria%20de%20conversar."
+                            class="social-link"><i class="bi bi-whatsapp"></i></a>
                     </div>
                 </div>
 
@@ -396,41 +405,97 @@
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
     <script>
-        function enviar() {
-            const nome     = document.getElementById('nome').value.trim();
-            const email    = document.getElementById('email').value.trim();
-            const tipo     = document.getElementById('tipo').value;
+        emailjs.init({
+            publicKey: "ufNACRgGBnlJVAWVp"
+        });
+
+        async function enviar() {
+
+            const nome = document.getElementById('nome').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const empresa = document.getElementById('empresa').value.trim();
+            const tipo = document.getElementById('tipo').value;
             const mensagem = document.getElementById('mensagem').value.trim();
 
             if (!nome || !email || !tipo || !mensagem) {
-                // destaca campos vazios
-                [['nome', nome], ['email', email], ['tipo', tipo], ['mensagem', mensagem]].forEach(([id, val]) => {
-                    const el = document.getElementById(id);
-                    if (!val) {
-                        el.style.borderColor = '#e53935';
-                        el.addEventListener('input', () => el.style.borderColor = '', { once: true });
-                    }
-                });
+
+                [['nome', nome], ['email', email], ['tipo', tipo], ['mensagem', mensagem]]
+                    .forEach(([id, valor]) => {
+
+                        const campo = document.getElementById(id);
+
+                        if (!valor) {
+                            campo.style.borderColor = '#e53935';
+
+                            campo.addEventListener('input', () => {
+                                campo.style.borderColor = '';
+                            }, { once: true });
+                        }
+                    });
+
                 return;
             }
 
-            // Aqui você conecta ao back-end futuramente:
-            // fetch('/api/contato', { method: 'POST', body: JSON.stringify({nome, email, tipo, mensagem}) })
+            const botao = document.querySelector('.btn-enviar');
 
-            const msg = document.getElementById('successMsg');
-            msg.style.display = 'block';
+            botao.disabled = true;
+            botao.innerHTML = 'Enviando...';
 
-            document.getElementById('nome').value     = '';
-            document.getElementById('email').value    = '';
-            document.getElementById('empresa').value  = '';
-            document.getElementById('tipo').value     = '';
-            document.getElementById('mensagem').value = '';
+            const parametros = {
+                from_name: nome,
+                from_email: email,
+                empresa: empresa || 'Não informado',
+                tipo: tipo,
+                message: mensagem
+            };
 
-            setTimeout(() => { msg.style.display = 'none'; }, 6000);
+            try {
+
+                console.log(parametros);
+
+                await emailjs.send(
+                    "service_quuh8b9",
+                    "template_appmeft",
+                    parametros
+                );
+
+                const msg = document.getElementById('successMsg');
+
+                msg.style.display = 'block';
+
+                document.getElementById('nome').value = '';
+                document.getElementById('email').value = '';
+                document.getElementById('empresa').value = '';
+                document.getElementById('tipo').value = '';
+                document.getElementById('mensagem').value = '';
+
+                setTimeout(() => {
+                    msg.style.display = 'none';
+                }, 6000);
+
+            } catch (erro) {
+
+                console.error("Erro EmailJS:", erro);
+
+                alert(
+                    `Erro: ${erro.text || erro.message || "Falha ao enviar"}`
+                );
+
+            } finally {
+
+                botao.disabled = false;
+                botao.innerHTML =
+                    '<i class="bi bi-send me-2"></i>Enviar mensagem';
+            }
         }
+
     </script>
 </body>
+
 </html>

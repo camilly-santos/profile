@@ -10,10 +10,63 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Syne:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Projetos - Camilly</title>
     <style>
+        /* Resumo da página */
+        .projects-summary {
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        /* Nome do projeto */
+        .project-name {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: .8rem;
+            line-height: 1.3;
+        }
+
+        /* Descrição do card */
+        .project-desc {
+            font-size: 1rem;
+            line-height: 1.7;
+            min-height: 5.5rem;
+        }
+
+        /* Tecnologias */
+        .project-tags .tag {
+            font-size: .85rem;
+        }
+
+        /* Modal */
+        .modal-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        .modal-copy {
+            font-size: 1.05rem;
+            line-height: 1.9;
+        }
+
+        /* Labels do modal */
+        .modal-label {
+            font-size: 11px;
+        }
+
+        /* Ajuste do card */
+        .project-info {
+            padding: 1.25rem;
+        }
+
+        .profile-role {
+            font-size: 1rem !important;
+        }
+
         .projetos-header {
             max-width: 1200px;
             margin: 0 auto;
@@ -205,7 +258,7 @@
                     <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
                 </ul>
             </div>
-            <div class="d-flex align-items-center gap-2 ms-auto">
+            <!-- <div class="d-flex align-items-center gap-2 ms-auto">
                 <div class="dropdown">
                     <button class="notif-btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="bi bi-bell"></i>
@@ -221,13 +274,15 @@
                     </ul>
                 </div>
             </div>
-        </div>
+        </div> -->
     </header>
 
     <main>
         <div class="projetos-header">
-            <p class="section-title">Projetos</p>
-            <p class="projects-summary">Uma selecao de estudos em front-end e sistemas web, com foco em interfaces responsivas, organizacao de dados e aplicacoes CRUD desenvolvidas durante a formacao tecnica.</p>
+            <p class="profile-role">Projetos</p>
+            <hr>
+            <p class="projects-summary">Uma selecao de estudos em front-end e sistemas web, com foco em interfaces
+                responsivas, organizacao de dados e aplicacoes CRUD desenvolvidas durante a formacao tecnica.</p>
         </div>
 
         <div class="swiper mySwiper">
@@ -238,17 +293,21 @@
         </div>
     </main>
 
-        <footer id="footer">
+    <footer id="footer">
         <div class="container-fluid px-4">
             <div class="row g-4">
 
                 <div class="col-12 col-md-5">
                     <p class="footer-label">Informações para Contato</p>
-                    <a class="contact-item" href="https://mail.google.com/mail/?view=cm&fs=1&to=camillyoli22@gmail.com&su=Contato%20pelo%20portf%C3%B3lio&body=Ol%C3%A1!%20Vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar." target="_blank" rel="noopener" aria-label="Enviar e-mail para Camilly pelo Gmail">
+                    <a class="contact-item"
+                        href="https://mail.google.com/mail/?view=cm&fs=1&to=camillyoli22@gmail.com&su=Contato%20pelo%20portf%C3%B3lio&body=Ol%C3%A1!%20Vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar."
+                        target="_blank" rel="noopener" aria-label="Enviar e-mail para Camilly pelo Gmail">
                         <i class="bi bi-envelope-fill d-flex"></i>
                         <span>camillyoli22@gmail.com</span>
                     </a>
-                    <a class="contact-item" href="https://wa.me/5567993025768?text=Olá!%20Vi%20seu%20portfólio%20e%20gostaria%20de%20conversar." target="_blank" rel="noopener" aria-label="Conversar com Camilly pelo WhatsApp">
+                    <a class="contact-item"
+                        href="https://wa.me/5567993025768?text=Olá!%20Vi%20seu%20portfólio%20e%20gostaria%20de%20conversar."
+                        target="_blank" rel="noopener" aria-label="Conversar com Camilly pelo WhatsApp">
                         <i class="bi bi-telephone-fill d-flex"></i>
                         <span>(67) 99302-5768</span>
                     </a>
@@ -261,9 +320,13 @@
                 <div class="col-12 col-md-4">
                     <p class="footer-label">Redes Sociais</p>
                     <div class="d-flex gap-2 flex-wrap">
-                        <a target="_blank" href="https://github.com/camilly-santos" class="social-link"><i class="bi bi-github"></i></a>
-                        <a target="_blank" href="https://www.linkedin.com/in/camilly-oliveira-01594a348/" class="social-link"><i class="bi bi-linkedin"></i></a>
-                        <a target="_blank" href="https://wa.me/5567993025768?text=Olá!%20Vi%20seu%20portfólio%20e%20gostaria%20de%20conversar."class="social-link" rel="noopener noreferrer"><i class="bi bi-whatsapp"></i></a>
+                        <a target="_blank" href="https://github.com/camilly-santos" class="social-link"><i
+                                class="bi bi-github"></i></a>
+                        <a target="_blank" href="https://www.linkedin.com/in/camilly-oliveira-01594a348/"
+                            class="social-link"><i class="bi bi-linkedin"></i></a>
+                        <a target="_blank"
+                            href="https://wa.me/5567993025768?text=Olá!%20Vi%20seu%20portfólio%20e%20gostaria%20de%20conversar."
+                            class="social-link" rel="noopener noreferrer"><i class="bi bi-whatsapp"></i></a>
                     </div>
                 </div>
 
@@ -312,7 +375,8 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         const projects = [
@@ -345,8 +409,8 @@
                 id: "crud-alunos-python",
                 title: "CRUD de Alunos em Python",
                 shortDescription: "Sistema CRUD para cadastro e gerenciamento de alunos. A aplicacao trabalha operacoes de criacao, leitura, edicao e exclusao em uma interface simples.",
-                fullDescription: "O CRUD de Alunos em Python foi desenvolvido para praticar a manipulacao de registros em um sistema web. A aplicacao permite cadastrar alunos, consultar dados, atualizar informacoes e remover registros quando necessario. O projeto reforca a integracao entre uma interface HTML/CSS e a logica de back-end em Python.",
-                technologies: ["HTML", "CSS", "Python"],
+                fullDescription: "O CRUD de Alunos em Python foi desenvolvido para praticar a manipulacao de registros em um sistema web. A aplicacao permite cadastrar alunos, consultar dados, atualizar informacoes e remover registros quando necessario. O projeto reforca a integracao entre uma interface HTML/CSS e Bootstrap e a logica de back-end em Python.",
+                technologies: ["HTML", "CSS", "Python", "Bootstrap"],
                 images: [
                     { src: "img/crud_aluno_py.png", alt: "Tela do CRUD de alunos em Python" }
                 ],
@@ -357,8 +421,8 @@
                 id: "crud-livros-python",
                 title: "CRUD de Livros em Python",
                 shortDescription: "Aplicacao para controle de livros com cadastro, listagem e manutencao de registros. O foco esta na organizacao de dados e no fluxo basico de CRUD.",
-                fullDescription: "O CRUD de Livros em Python simula um sistema de gerenciamento de acervo. Ele organiza registros de livros em uma interface direta, permitindo registrar informacoes, revisar a lista cadastrada e manter os dados atualizados. O projeto demonstra fundamentos de aplicacoes administrativas com Python, HTML e CSS.",
-                technologies: ["HTML", "CSS", "Python"],
+                fullDescription: "O CRUD de Livros em Python simula um sistema de gerenciamento de acervo. Ele organiza registros de livros em uma interface direta, permitindo registrar informacoes, revisar a lista cadastrada e manter os dados atualizados. O projeto demonstra fundamentos de aplicacoes administrativas com Python, HTML, CSS e Bootstrap.",
+                technologies: ["HTML", "CSS", "Python", "Bootstrap"],
                 images: [
                     { src: "img/livros_py.png", alt: "Tela do CRUD de livros em Python" }
                 ],
@@ -369,8 +433,8 @@
                 id: "sistema-quitanda",
                 title: "Sistema de uma Quitanda",
                 shortDescription: "Sistema web para uma quitanda, com telas de gerenciamento e visualizacao de produtos. O projeto aplica Python em uma solucao simples de controle comercial.",
-                fullDescription: "O Sistema de uma Quitanda foi pensado para representar uma rotina de cadastro e consulta de produtos em um pequeno comercio. A interface apresenta informacoes de forma clara e apoia operacoes essenciais de gerenciamento. O projeto combina estrutura visual em HTML/CSS com logica em Python para reforcar conceitos de sistemas web orientados a dados.",
-                technologies: ["HTML", "CSS", "Python"],
+                fullDescription: "O Sistema de uma Quitanda foi pensado para representar uma rotina de cadastro e consulta de produtos em um pequeno comercio. A interface apresenta informacoes de forma clara e apoia operacoes essenciais de gerenciamento. O projeto combina estrutura visual em HTML/CSS e Bootstrap com logica em Python para reforcar conceitos de sistemas web orientados a dados.",
+                technologies: ["HTML", "CSS", "Python", "Bootstrap"],
                 images: [
                     { src: "img/quitanda_py.png", alt: "Tela principal do sistema de quitanda" },
                     { src: "img/quitanda2_py.png", alt: "Tela complementar do sistema de quitanda" }
@@ -379,14 +443,65 @@
                 demo: ""
             },
             {
-                id: "redimensionamento-responsivo",
-                title: "Redimensionamento Responsivo",
-                shortDescription: "Estudo de responsividade para adaptar uma interface a diferentes tamanhos de tela. O projeto evidencia ajustes de layout, proporcao e legibilidade.",
-                fullDescription: "O estudo de Redimensionamento Responsivo explora como uma pagina se comporta em diferentes larguras de tela. A proposta trabalha a adaptacao de elementos visuais, preservando leitura, alinhamento e hierarquia em dispositivos menores. O projeto reforca conceitos essenciais de CSS responsivo e planejamento de interfaces flexiveis.",
-                technologies: ["HTML", "CSS", "Responsividade"],
+                id: "gerenciador-albuns",
+                title: "Gerenciador de Álbuns Musicais",
+                shortDescription: "Aplicação mobile para cadastro e gerenciamento de álbuns musicais, permitindo registrar informações dos artistas, álbuns e faixas de forma organizada.",
+
+                fullDescription: "O projeto Gerenciador de Álbuns Musicais foi desenvolvido para facilitar o cadastro e a visualização de álbuns musicais em uma aplicação mobile. O sistema permite armazenar informações como nome do álbum, artista, ano de lançamento, gravadora, quantidade de faixas e músicas associadas. O front-end foi desenvolvido com React Native e Expo, enquanto o back-end foi construído em JavaScript, realizando o processamento e gerenciamento dos dados. Além disso, foram implementadas validações de formulário, navegação entre telas e integração com API através do Axios, proporcionando uma experiência prática de desenvolvimento full stack mobile.",
+
+                technologies: ["React Native", "Expo", "JavaScript", "Axios"],
+
                 images: [
-                    { src: "img/redimensaionamento_responsivo.png", alt: "Exemplo de redimensionamento responsivo" }
+                    { src: "img/albuns1.png", alt: "Tela de inicio Álbuns Musicais" },
+                    { src: "img/albuns2.png", alt: "Tela de adcionar Álbuns Musicais " },
+                    { src: "img/albuns3.png", alt: "Tela de listagem de Álbuns Musicais" }
                 ],
+
+                github: "",
+                demo: ""
+
+            },
+            {
+                id: "adivinhe-musica",
+                title: "Adivinhe a Música",
+                shortDescription: "Jogo web interativo onde o usuário escuta trechos de músicas e tenta adivinhar o nome correto. O sistema utiliza pontuação, tentativas progressivas e categorias musicais.",
+
+                fullDescription: "O projeto Adivinhe a Música foi desenvolvido como uma aplicação web de entretenimento baseada em desafios musicais. O jogador seleciona uma categoria e escuta pequenos trechos de músicas para tentar identificar a resposta correta. O sistema controla tentativas, aumenta o tempo de reprodução conforme o avanço da rodada e calcula a pontuação de acordo com o desempenho do usuário. O front-end foi desenvolvido utilizando HTML, CSS, Bootstrap e JavaScript, enquanto o back-end foi construído em JavaScript com rotas responsáveis pelo sorteio e envio das músicas. O projeto também implementa comunicação assíncrona com Fetch API, manipulação dinâmica do DOM, reprodução de áudio e validações de jogo, proporcionando uma experiência prática de desenvolvimento full stack.",
+
+                technologies: [
+                    "HTML",
+                    "CSS",
+                    "Bootstrap",
+                    "Python",
+                    "Flask"
+                ],
+
+                images: [
+                    { src: "img/jogo1_py.png", alt: "Tela inicial do jogo Adivinhe a Música" },
+                    { src: "img/jogo2_py.png", alt: "Jogador ouvindo trecho da música" }
+                ],
+
+                github: "",
+                demo: ""
+            },
+            {
+                id: "calculadora",
+                title: "Calculadora Web",
+
+                shortDescription: "Calculadora web inspirada em dispositivos móveis, desenvolvida com interface responsiva e integração entre front-end e back-end.",
+
+                fullDescription: "A Calculadora Web foi desenvolvida para simular a experiência de uso de calculadoras presentes em smartphones. O projeto possui uma interface moderna e responsiva construída com HTML e CSS, enquanto a lógica de processamento das operações matemáticas foi implementada em Python utilizando Flask. A aplicação realiza operações de adição, subtração, multiplicação e divisão através da comunicação assíncrona entre o navegador e o servidor utilizando Fetch API. O sistema recebe os valores digitados pelo usuário, envia os dados para o back-end, processa os cálculos no servidor e retorna o resultado em tempo real para a interface. O projeto demonstra conhecimentos em desenvolvimento full stack, integração entre front-end e back-end, criação de rotas, manipulação do DOM e consumo de APIs com JavaScript.",
+
+                technologies: [
+                    "HTML",
+                    "CSS",
+                    "Python"
+                ],
+
+                images: [
+                    { src: "img/calculadora1.png", alt: "Tela principal da calculadora" }
+                ],
+
                 github: "",
                 demo: ""
             }
@@ -520,4 +635,5 @@
         });
     </script>
 </body>
+
 </html>

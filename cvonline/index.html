@@ -15,6 +15,84 @@
     <link rel="stylesheet" href="style.css">
     <title>Camilly Oliveira Santos</title>
     <style>
+        /* ===== AUMENTAR FONTES GERAIS ===== */
+
+        body {
+            font-size: 16px;
+        }
+
+        .profile-name {
+            font-size: 1.8rem !important;
+        }
+
+        .profile-role {
+            font-size: 1rem !important;
+        }
+
+        .about-label,
+        .footer-label {
+            font-size: 0.95rem !important;
+        }
+
+        .about-text {
+            font-size: 1rem !important;
+            line-height: 1.8;
+        }
+
+        .profile-meta span {
+            font-size: 0.95rem !important;
+        }
+
+        .edu-name,
+        .exp-title {
+            font-size: 1.05rem !important;
+            font-weight: 600;
+        }
+
+        .edu-info,
+        .exp-period {
+            font-size: 0.95rem !important;
+        }
+
+        .skill-item {
+            font-size: 1rem !important;
+            line-height: 1.7;
+        }
+
+        .skills-col-title {
+            font-size: 0.9rem !important;
+        }
+
+        .contact-item,
+        .footer-copy {
+            font-size: 0.95rem !important;
+        }
+
+        .credential-btn {
+            font-size: 0.9rem !important;
+        }
+
+        .course-kicker {
+            font-size: 0.8rem !important;
+        }
+
+        .course-title {
+            font-size: 1.6rem !important;
+        }
+
+        .course-text {
+            font-size: 1.05rem !important;
+        }
+
+        .course-fact span {
+            font-size: 0.8rem !important;
+        }
+
+        .course-fact strong {
+            font-size: 1rem !important;
+        }
+
+
         /* ── Home ocupa a tela toda ── */
         .main-wrap {
             max-width: 100% !important;
@@ -275,20 +353,6 @@
                 </ul>
             </div>
             <div class="d-flex align-items-center gap-2 ms-auto">
-                <!-- <div class="dropdown">
-                    <button class="notif-btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="bi bi-bell"></i>
-                        <span class="badge badge-notif rounded-pill ms-1">99+</span>
-                    </button>
-                    <ul class="dropdown-menu dropdown-menu-end">
-                        <li><span class="dropdown-item mono" style="font-size:10px; color:var(--text-muted); letter-spacing:.1em;">NOTIFICAÇÕES</span></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#"><i class="bi bi-dot text-success"></i> Mensagem 1</a></li>
-                        <li><a class="dropdown-item" href="#"><i class="bi bi-dot text-success"></i> Mensagem 2</a></li>
-                        <li><a class="dropdown-item" href="#">Mensagem 3</a></li>
-                        <li><a class="dropdown-item" href="#">Mensagem 4</a></li>
-                    </ul>
-                </div> -->
             </div>
         </div>
     </header>
@@ -303,7 +367,9 @@
                     <div class="profile-avatar">C</div>
                     <div class="profile-body">
                         <p class="profile-name">Camilly Oliveira Santos</p>
-                        <p class="profile-role"><hr></p>
+                        <p class="profile-role">
+                            <hr>
+                        </p>
 
                         <div class="profile-meta">
                             <span><i class="bi bi-geo-alt"></i>Botucatu, SP</span>
@@ -315,7 +381,7 @@
                         <p class="about-text">
                             Estudante de tecnologia e desenvolvedora em formação. Gosto de
                             criar aplicações web que combinam funcionalidade, organização e boa experiência para o
-                            usuário. Estou sempre em busca de desafios que me permitam evoluir profissionalmente e 
+                            usuário. Estou sempre em busca de desafios que me permitam evoluir profissionalmente e
                             contribuir com soluções inovadoras.
                         </p>
                     </div>
@@ -345,15 +411,53 @@
                             </div>
 
                             <div class="edu-item">
-                                <div class="edu-icon"><i class="bi bi-book"></i></div>
-                                <div class="edu-content">
+                                <div class="edu-icon"><i class="bi bi-mortarboard"></i></div>
+                                <div>
                                     <p class="edu-name">Auxiliar Jurídico</p>
-                                    <p class="edu-info">UNICESUMAR · 2024 — 2025</p>
+                                    <p class="edu-info">UNICESUMAR · 2024 - 2025</p>
                                 </div>
 
                                 <button class="credential-btn edu-action" type="button" data-bs-toggle="modal"
                                     data-bs-target="#modalAuxiliarJuridico"
                                     aria-label="Ver detalhes do curso Auxiliar Juridico">
+                                    <i class="bi bi-award"></i>
+                                    <span>Certificado</span>
+                                </button>
+                            </div>
+
+                            <div class="edu-item">
+                                <div class="edu-icon">
+                                    <i class="bi bi-file-earmark-excel"></i>
+                                </div>
+
+                                <div class="edu-content">
+                                    <p class="edu-name">Excel Básico</p>
+                                    <p class="edu-info">SENAI EAD · 2025</p>
+                                </div>
+
+                                <button class="credential-btn edu-action" type="button" data-bs-toggle="modal"
+                                    data-bs-target="#modalExcelBasico" aria-label="Ver detalhes do curso Excel Básico">
+
+                                    <i class="bi bi-award"></i>
+                                    <span>Certificado</span>
+
+                                </button>
+                            </div>
+
+                            <div class="edu-item">
+                                <div class="edu-icon">
+                                    <i class="bi bi-shield-lock"></i>
+                                </div>
+
+                                <div>
+                                    <p class="edu-name">Por Dentro da Segurança Cibernética</p>
+                                    <p class="edu-info">SENAI EAD · 2025</p>
+                                </div>
+
+                                <button class="credential-btn edu-action" type="button" data-bs-toggle="modal"
+                                    data-bs-target="#modalSegurancaCibernetica"
+                                    aria-label="Ver detalhes do curso Por Dentro da Segurança Cibernética">
+
                                     <i class="bi bi-award"></i>
                                     <span>Certificado</span>
                                 </button>
@@ -374,22 +478,57 @@
                 <!-- ── Habilidades (sempre visível, sem accordion) ── -->
                 <div class="section-card mb-3">
                     <p class="profile-role">Habilidades</p>
+
                     <div class="skills-grid">
 
                         <div>
                             <p class="skills-col-title">Hard Skills</p>
-                            <div class="skill-item"><span class="skill-dot"></span>React / JavaScript</div>
-                            <div class="skill-item"><span class="skill-dot"></span>Python / Flask</div>
-                            <div class="skill-item"><span class="skill-dot"></span>HTML & CSS / Bootstrap</div>
-                            <div class="skill-item"><span class="skill-dot"></span>Figma / UI Design</div>
+
+                            <div class="skill-item">
+                                <span class="skill-dot"></span>
+                                Desenvolvimento de interfaces web com React e JavaScript
+                            </div>
+
+                            <div class="skill-item">
+                                <span class="skill-dot"></span>
+                                Criação de aplicações em Python com operações CRUD (cadastro, leitura, atualização e
+                                exclusão de dados)
+                            </div>
+
+                            <div class="skill-item">
+                                <span class="skill-dot"></span>
+                                Desenvolvimento de interfaces responsivas com HTML, CSS e Bootstrap
+                            </div>
+
+                            <div class="skill-item">
+                                <span class="skill-dot"></span>
+                                Desenvolvimento de aplicações mobile com React Native e Expo
+                            </div>
                         </div>
 
                         <div>
                             <p class="skills-col-title">Soft Skills</p>
-                            <div class="skill-item"><span class="skill-dot"></span>Escuta Ativa</div>
-                            <div class="skill-item"><span class="skill-dot"></span>Colaboração em equipe</div>
-                            <div class="skill-item"><span class="skill-dot"></span>Comunicação clara</div>
-                            <div class="skill-item"><span class="skill-dot"></span>Resolução de problemas</div>
+
+                            <div class="skill-item">
+                                <span class="skill-dot"></span>
+                                Comunicação clara em equipe e em ambiente de desenvolvimento
+                            </div>
+
+                            <div class="skill-item">
+                                <span class="skill-dot"></span>
+                                Colaboração em projetos acadêmicos e práticos
+                            </div>
+
+                            <div class="skill-item">
+                                <span class="skill-dot"></span>
+                                Escuta ativa para entendimento de requisitos e feedbacks
+                            </div>
+
+                            <div class="skill-item">
+                                <span class="skill-dot"></span>
+                                Resolução de problemas com foco em lógica e debugging
+                            </div>
+
                         </div>
 
                     </div>
@@ -414,9 +553,9 @@
 
                             <div class="exp-item">
                                 <span class="exp-period">Registro Empregatício</span>
-                                <p class="exp-title">Comprovação de Assiduidade; Postura Profissional; Desenvolvimento
-                                    Front-End e Back-End; Manipulação de Dados; Desenvolvimento em Dispositivos Móveis;
-                                    Elaboração de Projetos.</p>
+                                <p class="exp-title">Comprovação de assiduidade, postura profissional e atuação em
+                                    desenvolvimento front-end e back-end, manipulação de dados, desenvolvimento mobile e
+                                    elaboração de projetos.</p>
                                 <p class="edu-info">Usina Açucareira de São Manoel — São Manoel, SP</p>
                             </div>
 
@@ -523,6 +662,126 @@
                             </div>
                         </object>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade course-modal" id="modalExcelBasico" tabindex="-1" aria-labelledby="modalExcelBasicoLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <div>
+                        <p class="course-kicker">Formação Complementar</p>
+                        <h5 class="modal-title course-title" id="modalExcelBasicoLabel">
+                            Excel Básico
+                        </h5>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+
+                <div class="modal-body pt-0">
+                    <p class="course-text">
+                        Curso voltado ao desenvolvimento de competências essenciais no uso do
+                        Microsoft Excel, abordando organização de planilhas, formatação de dados,
+                        utilização de fórmulas básicas, funções, criação de gráficos e recursos
+                        para controle e análise de informações no ambiente corporativo.
+                    </p>
+
+                    <div class="course-facts">
+                        <div class="course-fact">
+                            <span>Instituição</span>
+                            <strong>SENAI EAD</strong>
+                        </div>
+
+                        <div class="course-fact">
+                            <span>Período</span>
+                            <strong>2024</strong>
+                        </div>
+
+                        <div class="course-fact">
+                            <span>Status</span>
+                            <strong>Concluído</strong>
+                        </div>
+                    </div>
+
+                    <div class="certificate-preview">
+                        <object data="certificados/Certificado_Excel Básic.pdf" type="application/pdf">
+
+                            <div class="certificate-fallback">
+                                <p class="mb-0">
+                                    Seu navegador não exibiu a prévia do certificado.
+                                </p>
+                            </div>
+
+                        </object>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade course-modal" id="modalSegurancaCibernetica" tabindex="-1"
+        aria-labelledby="modalSegurancaCiberneticaLabel" aria-hidden="true">
+
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+                <div class="modal-header border-0">
+                    <div>
+                        <p class="course-kicker">Formação Complementar</p>
+                        <h5 class="modal-title course-title" id="modalSegurancaCiberneticaLabel">
+                            Por Dentro da Segurança Cibernética
+                        </h5>
+                    </div>
+
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar">
+                    </button>
+                </div>
+
+                <div class="modal-body pt-0">
+
+                    <p class="course-text">
+                        Curso introdutório voltado à conscientização sobre segurança
+                        digital, abordando conceitos fundamentais de cibersegurança,
+                        proteção de dados, privacidade na internet, identificação de
+                        ameaças virtuais, golpes digitais e boas práticas para navegação
+                        segura em ambientes pessoais e corporativos.
+                    </p>
+
+                    <div class="course-facts">
+
+                        <div class="course-fact">
+                            <span>Instituição</span>
+                            <strong>SENAI EAD</strong>
+                        </div>
+
+                        <div class="course-fact">
+                            <span>Período</span>
+                            <strong>2024</strong>
+                        </div>
+
+                        <div class="course-fact">
+                            <span>Status</span>
+                            <strong>Concluído</strong>
+                        </div>
+
+                    </div>
+
+                    <div class="certificate-preview">
+                        <object data="certificados/Certificado_Por dentro da Segurança Cibernétic.pdf"
+                            type="application/pdf">
+
+                            <div class="certificate-fallback">
+                                <p class="mb-0">
+                                    Seu navegador não exibiu a prévia do certificado.
+                                </p>
+                            </div>
+
+                        </object>
+                    </div>
+
                 </div>
             </div>
         </div>
