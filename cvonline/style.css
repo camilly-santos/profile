@@ -126,20 +126,15 @@ code,
 }
 
 .profile-avatar {
-    width: 76px;
-    height: 76px;
+    width: 96px;
+    height: 96px;
     border-radius: 50%;
     border: 3px solid var(--bg);
-    background: var(--accent);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 26px;
-    font-weight: 700;
-    color: #0c0c0c;
-    margin-top: -38px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    margin-top: -48px;
     margin-left: 20px;
-    font-family: 'Syne', sans-serif;
 }
 
 .profile-body {
